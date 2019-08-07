@@ -1,0 +1,17 @@
+mixin s-programm()
+	// start s-programm
+	+b.SECTION.s-programm.section.block-with-lazy#s-programm&attributes(attributes)
+		.container
+			+b.section-title 
+				h2 На каких программах выполняются проекты 
+			- for (var x = 0; x < 3; x++)
+				+e.item
+					.row
+						.col-lg
+							+e.title 1С: Бухгалтерия 8.3
+							.text Автоматизация бухгалтерского и налогового учета, включая подготовку отчетности.
+						+e.price.col-lg-auto.col-sm от 33 000 руб.
+						.col-auto
+							+e.btn.btn--arrow(href="#") подробнее
+				// /+e.item
+	// end s-programm

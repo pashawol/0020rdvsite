@@ -1,0 +1,50 @@
+ 
+	  
+.soc{
+	margin: 0 rem(-10px);
+	display: flex;
+	margin-bottom: rem(20);
+	&__item{
+		text-decoration: none !important;
+		margin: 0 rem(10px);
+		vertical-align: middle;
+		@include mt;
+		display: block;
+		width: rem(44);
+		height: rem(44);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid #fff;
+		// border-radius: rem(3);
+		border-radius: 50%;
+		color: #ffffff !important;
+		opacity: 1 ;
+		&:hover{
+			opacity: .8 ;
+		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		}
+		
+	}
+	.icon{
+	font-size: rem(14);
+	&-fb{
+		font-size: rem(21);
+	}
+	}
+	 
+
+}
+ 
+
+.counter{
+	counter-reset: num;
+	&__item {
+		position: relative; 
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+		}
+	}
+}
+

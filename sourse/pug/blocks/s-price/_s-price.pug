@@ -1,0 +1,42 @@
+mixin s-price()
+	// start s-price
+	+b.SECTION.s-price.section.block-with-lazy#s-price&attributes(attributes)
+		.container
+			h2 Цены на наши услуги
+			+e.table-wrap
+				table
+					tr 
+						th.h6 наименование услуги в пакете
+						th.h6.text-center Базовый
+						th.h6.text-center Расширенный
+					mixin tr()
+						tr
+							td Настройки выгрузки товаров, свойств, картинок в 1С с сайта
+
+							td.text-center
+								block
+
+							td.text-center
+								+icon("check")
+					- for (var x = 0; x < 5; x++)
+						+tr()
+							+icon("check")
+					
+					- for (var x = 0; x < 5; x++)
+						+tr()
+					tr
+						td Стоимость пакета
+						td.text-center
+							+e.total  3 000 руб.
+
+						td.text-center
+							+e.total  33 000 руб.
+					
+					tr
+						td  
+						td.text-center
+							a.btn.btn-primary(href="#") выбрать опцию
+
+						td.text-center
+							a.btn.btn-primary(href="#") выбрать опцию  
+	// end s-price

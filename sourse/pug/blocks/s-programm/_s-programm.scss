@@ -1,0 +1,56 @@
+.s-programm {
+
+	&__item{
+		box-shadow: 0 4px 10px rgba(2, 27, 52, 0.2);
+		background-color: #ffffff;
+		padding: rem(15) rem(20);
+		margin-bottom: rem(10);
+		.row{
+			align-items: center;
+		}
+	}
+	&__title{
+		color: $blue-dark;  
+		font-weight: 700;
+		line-height: 1.56;
+		text-transform: uppercase;
+	}
+	&__price{
+		@extend .h2;
+		color: $blue-dark;  
+		font-weight: 700;
+		@include media-breakpoint-up(sm) {
+			// margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

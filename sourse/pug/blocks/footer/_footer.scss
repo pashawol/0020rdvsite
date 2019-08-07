@@ -1,0 +1,104 @@
+.footer {
+  @include media-breakpoint-up(sm) {
+
+    padding: rem(40px) 0  ;
+  }
+  padding: rem(40px) 0 rem(26px);
+  background-color: $blue-dark;
+ color: #ffffff;
+ &__group{
+   padding-bottom: rem(10);
+ }
+ &__link{
+  color: #ffffff !important;
+  @extend .mono;
+  @extend .h6;
+  &--sm{
+    font-size: rem(12);
+    letter-spacing: rem(2.4px);
+  }
+  font-weight: normal;
+  max-width: rem(470);
+  // vertical-align: middle;
+  display: inline-flex;
+  // 
+  .icon{ 
+    font-size: rem(14);
+    &-mark{
+      font-size: rem(17);
+      
+    }
+  }
+      &--tel{
+        font-weight: bold;
+        .icon{
+          font-size: rem(7);
+         }
+      }
+  }
+  &__icon-wrap{
+    width: rem(17);
+    text-align: center;
+    margin-right: rem(10);
+  }
+
+  &__btn{
+    @extend .btn;
+    @extend .btn-warning;
+    width: rem(190);
+    margin-bottom: rem(19);
+   
+
+  }
+  @include media-breakpoint-up(sm) {
+
+    .soc{
+      justify-content: flex-end;
+    }
+  }
+  &__copy{
+    padding-top: rem(10);
+    color: #ffffff;
+    font-family: "Apercu Pro";
+    font-size: $em-base;
+    font-weight: 400;
+    line-height: 1.38;
+  }
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+
+// 
+@include media-breakpoint-between(md, xl) {}
+
+
+// 
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+
+// 
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+}

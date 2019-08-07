@@ -1,0 +1,60 @@
+.s-price {
+	&__table-wrap{
+		position: relative;
+		overflow-x: auto;
+	}
+	table{
+		width: 100%;
+		max-width: 100%;
+		min-width: 640px;
+	}
+
+	th{
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+	th,
+	td{
+		padding: rem(10) 0;
+		color: $dark;
+		padding-left: 2px;
+		padding-right: 2px;
+		.icon{
+			color: $primary;
+			font-size: 1rem;
+		}
+	}
+	&__total{
+		text-align: center;
+		font-weight: bold;
+		@include rfs(rem(30));
+	}
+	.btn{
+		width: rem(180);
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

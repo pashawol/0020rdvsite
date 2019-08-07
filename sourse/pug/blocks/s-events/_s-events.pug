@@ -1,0 +1,25 @@
+mixin s-events()
+	// start s-events
+	+b.SECTION.s-events.section.block-with-lazy#s-events&attributes(attributes)
+		.container 
+			.row
+				- for (var x = 0; x < 2; x++)
+					+e.col.col-md-6
+						+e.item
+							+pic("events-img","jpg","bg")(class="picture-bg")
+							+e.body
+								+e.label Вебинар
+								+e.title Взгляд изнутри. Как увеличить продажи с помощью маркетплейсов
+								+e.text Снятся ли интернет-продавцам маркетплейсы? Расскажем всё самое главное о маркетплейсах и том, как получать больше продаж с их помощью.
+								+e.more(href="#") подробнее
+									+icon("chevron-right2")
+							+e.footer
+								.row
+									+e.footer-col.col
+										+icon("picker")
+										| 22 июня, понедельник, 18:00
+									+e.footer-col.col-sm-auto
+										+icon("money")
+										| бесплатно
+					// /+e.col.col-md-6
+	// end s-events

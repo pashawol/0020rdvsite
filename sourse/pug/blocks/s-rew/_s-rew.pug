@@ -1,0 +1,13 @@
+mixin s-rew()
+	// start s-rew
+	+b.SECTION.s-rew.section.block-with-lazy#s-rew&attributes(attributes)
+		.container
+			+b.section-title 
+				h2 Нас уже оценили
+				
+			.row.gal
+				- for (var x = 1; x < 5; x++)
+					+e.col.col-sm-3.col-6
+						+e.img-wrap(href=`img/@2x/rew-${x}.jpg`)
+							+pic("rew-" + x,"jpg",'bg')
+	// end s-rew

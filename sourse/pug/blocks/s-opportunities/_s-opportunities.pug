@@ -1,0 +1,24 @@
+mixin s-opportunities()
+	// start s-opportunities
+	+b.SECTION.s-opportunities.section.text-white.block-with-lazy#s-opportunities&attributes(attributes)
+		+pic('opportunities-bg',"jpg",'bg')
+		.container
+			+b.section-title
+				h2 Возможности с внедрением системы 1С CRM 
+				
+			.row
+				mixin item(i)
+					.col-xl.col-md-6
+						+e.item
+							+pic('opportunities-'+ i,"png")
+							block
+				+item(1)
+					.ttu.strong Сокращение ресурсов на&nbsp;заполнение интернет-магазина на&nbsp;70&nbsp;%
+					p Обмен данными с&nbsp;каталогом происходит со&nbsp;скоростью 100 товаров в&nbsp;минуту. Всё, что потребуется для автоматического заполнения онлайн-витрины с&nbsp;ALSET&nbsp;&mdash; корректное внедрение &laquo;1С&raquo; с&nbsp;CRM для интернет-магазина.
+				+item(2)
+					.ttu.strong Удобство учёта, полная 1С автоматизация интернет-магазина
+					p Обмен данными с&nbsp;каталогом происходит со&nbsp;скоростью 100 товаров в&nbsp;минуту. Всё, что потребуется для автоматического заполнения онлайн-витрины с&nbsp;ALSET&nbsp;&mdash; корректное внедрение &laquo;1С&raquo; с&nbsp;CRM для интернет-магазина.
+				+item(3)
+					.ttu.strong Сокращение временных затрат  на&nbsp;обработку заказов на&nbsp;90%
+					p Обмен данными с&nbsp;каталогом происходит со&nbsp;скоростью 100 товаров в&nbsp;минуту. Всё, что потребуется для автоматического заполнения онлайн-витрины с&nbsp;ALSET&nbsp;&mdash; корректное внедрение &laquo;1С&raquo; с&nbsp;CRM для интернет-магазина.
+	// end s-opportunities

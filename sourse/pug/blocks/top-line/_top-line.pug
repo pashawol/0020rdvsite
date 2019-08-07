@@ -1,0 +1,25 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container
+			.row
+				.col-auto.col.d-lg-none
+					+b.toggle-menu-mobile--js
+						div
+						div
+						
+				.col-lg-8.col
+					+e.logo-wrap
+						a(href="#")
+							img(src="img/svg/logo.svg", alt="")
+							//- | ИТ&nbsp;КОНСАЛТИНГ И&nbsp;КОМПЛЕКСНАЯ АВТОМАТИЗАЦИЯ БИЗНЕСА
+							span.d-none.d-sm-block ИТ&nbsp;консалтинг и&nbsp;комплексная автоматизация бизнеса на&nbsp;1С
+				.col-lg.col-auto
+					.row
+						.col
+							+e.tel(href="tel:8(495)127-03-47") 
+								+icon('phone-alt-solid')
+								| 8(495) 127-03-47
+						.col-auto.d-none.d-lg-block
+							a.btn.btn-warning(href="#") Заказать звонок
+	// end .top-line

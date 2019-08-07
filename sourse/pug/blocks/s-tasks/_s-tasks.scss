@@ -1,0 +1,58 @@
+.s-tasks {
+		 
+	ul{
+		list-style-type: none;
+		@include media-breakpoint-up(md) {
+
+			columns: 2;
+		}
+	}
+	a{
+		color: $dark;
+		border-bottom: 1px solid transparent;
+		text-decoration: none !important;
+		&:hover{
+			color: $primary;
+			border-color: $primary;
+		}
+		// @extend .text-body;
+	}
+	li{
+		margin-bottom: 1rem;
+		position: relative;
+		padding-left: rem(30);
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			background-image: url(../img/svg/check-circle.svg);
+			width: rem(21);
+			height: rem(21);
+			@include bgs;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

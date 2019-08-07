@@ -1,0 +1,24 @@
+mixin item-news(i)
+	+e.col.col-lg-3.col-md-4.col-sm-6
+		+e.img-wrap.bg-wrap(href="#")
+			+pic("news-"+i,"jpg","bg","lazy",0)(class="picture-bg")
+		+e.small.text-primary 14 июля 2019
+		+e.title Заголовок-название релиза
+		+e.text Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis consectetur adipiscing sint occaecat...
+		+e.more(href="#") Подробнее 
+			+icon("chevron-right2")
+mixin s-news()
+	// start s-news
+	+b.SECTION.s-news.section.block-with-lazy#s-news&attributes(attributes)
+		.container
+			+b.section-title 
+				h2 Новости
+			+pugin()
+			.row
+				- for (var y = 1; y < 5; y++)
+					- for (var x = 1; x < 3; x++)
+						+item-news(x)
+			+e.btn-more(href="#") загрузить еще
+				.btn-icon-wrap
+					+icon("chevron-right2")
+	// end s-news

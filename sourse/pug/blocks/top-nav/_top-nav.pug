@@ -1,0 +1,33 @@
+
+mixin search()
+	+b.form-search
+		form
+			input(type="text" placeholder="Введите слово для поиска")
+			button(type="submit") 
+				+icon("search")
+mixin mob-mnu()
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js
+			div 
+			div 
+		+e.inner
+		
+			+search()
+			+mnu()
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row
+				.col-8.d-none.d-lg-block
+					.row
+						.col-lg-auto.col.d-none.d-xl-block
+							+b.toggle-menu-mobile--js
+								div
+								div
+						.col
+							+mnu()
+				.col
+					+search()
+	// end top-nav

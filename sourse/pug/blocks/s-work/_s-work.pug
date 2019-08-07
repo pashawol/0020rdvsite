@@ -1,0 +1,15 @@
+mixin s-work()
+	// start s-work
+	+b.SECTION.s-work.section.text-white.block-with-lazy#s-work&attributes(attributes)
+		+pic('work-bg',"jpg",'bg')(class="picture-bg")
+		.container
+			+b.section-title 
+				h2 Как это работает?
+			+e.slider-wrap
+				+e.slider--js
+					- for (var x = 0; x < 3; x++)
+						+e.slide
+							+pic('slide',"jpg",'bg',"lazy","440px")(class="picture-bg")
+						// /+e.slide
+
+	// end s-work

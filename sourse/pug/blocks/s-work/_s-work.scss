@@ -1,0 +1,80 @@
+.s-work {
+	@include media-breakpoint-up(sm) {
+
+		padding-bottom: 0;
+	}
+
+	&__slide{
+		background-color: $body-color;
+		picture{
+			box-shadow: inset  rem(10) rem(10) rem(10) rgba($color: #000000, $alpha: .5);
+			z-index: 2;
+		}
+		@include block(825, 510);
+	}
+	&__slider-wrap{
+		@include media-breakpoint-up(sm) {
+
+			position: relative;
+			padding-top: 4.5%;
+		padding-left: 20%;
+		padding-right: 17%;
+		padding-bottom: 18%;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			@include bg("tablet.png");
+			z-index: 2;
+			background-size: 100% 100%;
+			pointer-events: none;
+		}
+	}
+	}
+	.slick-arrow{
+		&.r{
+			@include media-breakpoint-up(xl) {
+
+				right: -200px;
+			}
+			right: -15px;
+			}
+	}
+	.slick-arrow{
+		&.l{
+			@include media-breakpoint-up(xl) {
+
+				left: -200px;
+			}
+			left: -15px;
+			}
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

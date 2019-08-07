@@ -1,0 +1,14 @@
+
+
+@include font-face ("Apercu Pro", "../fonts/ApercuPro-Regular/ApercuPro-Regular", $file-formats: woff2 );
+@include font-face ("Apercu Pro", "../fonts/ApercuPro-Light/ApercuPro-Light", 300, $file-formats: woff2 );
+@include font-face ("Apercu Pro", "../fonts/ApercuPro-Medium/ApercuPro-Medium", 500, $file-formats: woff2 );
+@include font-face ("Apercu Pro", "../fonts/ApercuPro-Bold/ApercuPro-Bold", bold, $file-formats: woff2 );
+@include font-face ("Apercu Pro", "../fonts/ApercuPro-Black/ApercuPro-Black", 900, $file-formats: woff2 );
+
+@include font-face (Geometria, "../fonts/Geometria/Geometria", $file-formats: woff2 ); 
+@include font-face (Geometria, "../fonts/Geometria-Medium/Geometria-Medium", 500, $file-formats: woff2 );
+@include font-face (Geometria, "../fonts/Geometria-Bold/Geometria-Bold", bold, $file-formats: woff2 );
+@include font-face (Geometria, "../fonts/Geometria-BoldItalic/Geometria-BoldItalic", bold, italic, $file-formats: woff2 );
+@include font-face (Geometria, "../fonts/Geometria-ExtraBold/Geometria-ExtraBold", 800, $file-formats: woff2 );
+

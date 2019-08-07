@@ -1,0 +1,16 @@
+mixin s-logo()
+	// start s-logo
+	+b.SECTION.s-logo.section.bg-light.block-with-lazy#s-logo&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 С нами уже работают
+			+e.slider--js
+				- for (var x = 1; x < 9; x++)
+					div: +pic('logo-'+x,"jpg","","lazy",0)
+					//- img.res-i(src=`img/@2x/logo-${x}.jpg`, alt="")
+				
+				- for (var x = 1; x < 9; x++)
+					div: +pic('logo-'+x,"jpg","","lazy",0)
+					//- img.res-i(src=`img/@2x/logo-${x}.jpg`, alt="")
+				
+	// end s-logo

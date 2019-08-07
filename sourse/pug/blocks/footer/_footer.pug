@@ -1,0 +1,36 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			.row
+				.col
+					+e.group
+						+e.link(href="mailto:info@rdv-it.ru") 
+							+e.icon-wrap
+								+icon("mail")
+							| info@rdv-it.ru 
+					+e.group
+						+e.link
+							+e.icon-wrap
+								+icon("mark")
+							| г. Москва, Красносельская нижн.&nbsp;ул., д.&nbsp;35&nbsp;стр.&nbsp;64, офис 225 Бизнес-центр &laquo;Виктория плаза&raquo; 
+					+e.group
+						+e.link--sm.tdu.strong(href="#")
+							+e.icon-wrap
+								+icon("list")
+							| ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+					+e.group
+						+e.link--sm.tdu.strong(href="#")
+							+e.icon-wrap
+								+icon("print")
+							| ВЕРСИЯ ДЛЯ ПЕЧАТИ
+
+
+				.col-sm-auto
+					+e.group
+						+e.link--tel.strong(href="tel:8(495)127-03-47")
+							+e.icon-wrap
+								+icon('phone-alt-solid')
+							| 8 (495) 127-03-47
+					+e.btn(href="#") Заказать звонок
+					+soc()
+			+e.copy © 2019 Все права защищены.

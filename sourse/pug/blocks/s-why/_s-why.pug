@@ -1,0 +1,24 @@
+mixin s-why()
+	// start s-why
+	+b.SECTION.s-why.section.bg-light.block-with-lazy#s-why&attributes(attributes)
+		.container
+			+b.section-title 
+				h2 Почему с нами выгодно работать 
+			.row
+				mixin item(i,t)
+					+e.col.col-lg-4.col-md-6
+						+e.item.row
+							+e.img-wrap.col-auto
+								img.res-i(src=`img/svg/why-i-${i}.svg`, alt="")
+							.col
+								+e.title= t
+								p Обмен данными с&nbsp;каталогом происходит со&nbsp;скоростью 100 товаров в&nbsp;минуту. Всё, что потребуется для автоматического заполнения онлайн-витрины с&nbsp;ALSET&nbsp;&mdash; корректное внедрение &laquo;1С&raquo; с&nbsp;CRM для интернет-магазина.
+
+					// /+e.col.col-4
+				+item("1","Без аванса")
+				+item("2","На ваш выбор")
+				+item("3","Быстро")
+				+item("4","Профессионально")
+				+item("5","Персонально")
+				+item("6","Гарантия 2 года")
+	// end s-why

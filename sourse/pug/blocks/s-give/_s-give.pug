@@ -1,0 +1,43 @@
+mixin s-give()
+	// start s-give
+	+b.SECTION.s-give.section.text-white.block-with-lazy#s-give&attributes(attributes)
+		+pic("give-bg","bg","lazy")(class="picture-bg") 
+		.container
+			+b.section-title
+				h2 Схема работы системы 1С CRM 
+			mixin item(i)
+				.col-lg-12.col-sm-4
+					+e.item&attributes(attributes)
+						img.res-i.lazy(src="#" data-src=`img/svg/icon-${i}.svg`, alt="")
+						block
+				//- /+e.item
+			.row
+				.col-lg-3
+					.row.justify-content-center 
+						+item("1")(class="item-center item-center-first")
+							p Графики платежей и&nbsp;начислений по&nbsp;договору
+				+e.col.col-lg-3
+					.row.justify-content-center
+						+item("2")
+							p Заявки на&nbsp;расходование денежных средств
+						+item("3")(class="item-center item-finish  item-center-arrow")
+							p Прогноз
+								br
+								| платежа
+						+item("4")
+							p Планируемое поступление денежных средств
+				+e.col.col-lg-3
+					.row.justify-content-center
+						+item("5")(class="item-center item-finish ")
+							p Реестр
+								br
+								| платежей
+						+item("6")
+							p Платежный
+								br
+								| календарь
+				.col-lg-3
+					.row.justify-content-center
+						+item("7")(class="item-finish item-last")
+							p Формирование платежных и&nbsp;кассовых документов
+	// end s-give

@@ -1,0 +1,106 @@
+//- svg-sprite
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="img/svg/sprite.svg#" + name)
+//-/ svg-sprite
+
+
+
+//- breadcrumb
+mixin breadcrumb(...items)
+	nav.breadcrumb
+		-for (var i = 0; i < items.length - 1; i++)
+			a.breadcrumb-item(href='#')= items[i]
+		span.breadcrumb-item.active=  items[items.length - 1]
+//- /breadcrumb
+
+		
+//- pugination
+mixin pugin()
+ 
+	.pagination-wrapper
+		ul.page-numbers
+			mixin li(n)
+				li
+					if block
+						block
+					else
+						a.page-numbers(href='#')= n 
+			+li()
+				span.prev.page-numbers( )
+					+icon("chevron-left2")
+			+li()
+				span.page-numbers.current  1
+			+li("2")
+			+li("3")
+			+li("...")
+			+li()
+				a.next.page-numbers(href='#')
+					+icon("chevron-right2")
+//- +pugin()
+//- /pugination
+//- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
+//- arrow for swiper-slider
+mixin arrow()
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+		+icon('chevron-left')
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+		+icon('chevron-right')
+//- /arrow for swiper-slider
+		
+ 
+
+//- scial buttons
+mixin soc()
+	+b.soc
+		mixin item()
+			+e.A.item(href="#" target="_blank")
+				block
+		+item()
+			+icon('vk')
+		+item()
+			+icon('fb') 
+//- /scial buttons
+//- WP menu
+mixin mnu()
+	- var nav= { "Услуги":"#","Кейсы":"#","Прикладные решения":"#","Статьи":"#" ,"О компании":"#","Контакты":"#"}
+	ul.menu
+		//- li.menu-item.menu-item-has-children
+		//- 	a(href="#") О нас
+		//- 	ul.sub-menu
+		//- 		li.menu-item: a(href="#") Строительство загородных домов
+		//- 		li.menu-item: a(href="#") Отделка загородных домов
+		//- 		li.menu-item: a(href="#") Покраска деревянных домов
+		//- 		li.menu-item: a(href="#") Штукатурные фасады загородных домов
+		each linkPatch, linkName in nav
+			li.menu-item: a(href="#")= linkName
+ 
+
+
+
+mixin pic( i,exp="jpg", bg, lazy="lazy", media='576px')
+	- const smpath2 = "2x"
+	- const smpath1 = "1x"
+	mixin src(i, exp, path , lazy, source, bg)
+		-const url= `img/@${path}/${i}.${exp}`
+		-const ifLazy = (lazy== "lazy")
+		-const src = ( ifLazy ? "#" : url)
+		-const data = (ifLazy ?  url  : null)
+
+		if source
+			source( srcset=src data-srcset= data  type=`image/${exp}`   )&attributes(attributes)
+		else
+			img(src=src data-src=data, class=(bg=="bg" ? "object-fit-js": null ) alt="")&attributes(attributes)
+	
+	// picture
+	picture( class= lazy)&attributes(attributes) 
+		if media !== 0 
+			each val in ["webp",exp] 
+				each val2 in [smpath2,smpath1] 
+					+src(i,val,`${val2 + (val ==  "webp" ? "/webp" : "") }`,lazy,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
+		else 
+			+src(i,'webp',smpath2+`/webp`,lazy,"source")
+			// /webp images  
+		+src(i, exp,smpath2, lazy,"",bg) 
+	// /picture 

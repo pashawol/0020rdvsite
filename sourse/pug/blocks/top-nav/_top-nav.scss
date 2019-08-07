@@ -1,0 +1,265 @@
+.top-nav {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	// position: absolute;
+	top: 100%;
+	position: relative;
+  z-index: 100;
+	// @include clearfix;ss
+	z-index: 20;
+	@include media-breakpoint-up(sm){
+    border-color: transparent;
+  }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+ 
+	@include mt;
+ 
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	&.fixed {
+		// width: 100vw;
+		bottom: auto;
+		margin-top: 0;
+		background-color: #fff;
+		// position: fixed;
+	}
+
+	&__nav {
+		text-align: center;
+		list-style-type: none;
+	}
+
+	&__item {
+		display: inline-block;
+		list-style-type: none;
+	}
+
+	.row{
+		align-items: center;
+	}
+	// 
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	// 
+	@include media-breakpoint-between(md, xl) {}
+
+	// 
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	// 
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+}
+.menu{
+	@include media-breakpoint-up(lg) {
+
+		display: flex;
+	}
+	align-items: center;
+	list-style-type: none;
+	@include media-breakpoint-up(xl) {
+
+		@include roww(20);
+	}
+	@include roww(8);
+	margin-bottom: 0;
+	a{
+		@extend .text-blue-dark;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+
+
+
+
+.form-search{
+	// width: rem(386);
+	position: relative;
+	// padding-left: rem(40);
+	input{
+		@include media-breakpoint-up(lg) {
+			border-color: #ffffff;
+		}
+		border: 1px solid $body-color;
+		border-radius: rem(40);
+		background: none; 
+		display: block;
+		width: 100%;
+		padding: rem(11) rem(50) rem(11) rem(20);
+		outline: none;
+			@include media-breakpoint-up(lg) {
+
+				color: #ffffff;
+			}
+		&::placeholder {
+				@include media-breakpoint-up(lg) {
+
+					color: #fff;
+				}
+			// Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+			opacity: 1;
+		}
+	}
+	.icon{
+		@include media-breakpoint-up(lg) {
+			
+			color: $primary;
+		}
+		color: #ffffff;
+		font-size: rem(13);
+	}
+	button{
+		border-radius: 50%;
+		width: rem(27);
+		height: rem(27);
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			border-color: #ffffff;
+			background-color: #fff;
+		}
+		border: 1px solid $body-color;
+		background-color: $body-color;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		@include a-cent(y);
+		right: rem(10);
+	}
+}
+
+// мобильное меню
+
+// мобильное меню
+$h: rem(4);
+
+.toggle-menu-mobile {
+	display: block;  
+	margin-left: 0;
+	position: relative;
+	z-index: 999 !important;
+	cursor: pointer;
+	margin-top: $h;
+	@include media-breakpoint-up(lg) {
+
+		pointer-events: none;
+	}
+	div{
+		display: block;
+		&::before,
+		&::after{
+			content: '';
+			height: $h;
+			background-color: $primary;
+			width: rem(30);
+			display: block;
+			margin-bottom: $h;
+		}
+		&::after{
+			width: $h * 5;
+
+		}
+	}
+}
+
+.menu-mobile {
+	position: fixed !important;
+	z-index: 999;
+	max-width: 85%;
+	height: 101vh;
+	width: 280px;
+	top: 0;
+	// left: 0;
+	right: 0;
+	transform: translate(100%, 0);
+	@include mt(.6);
+	will-change: transform;
+
+	&__inner {
+		background-color: #fff;
+		padding: rem(20) 15px;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		height: 100%;
+	}
+
+	&.active {
+		transform: translate(0, 0);
+
+		.toggle-menu-mobile {
+			opacity: 1;
+		}
+	}
+
+	.toggle-menu-mobile {
+		// position: relative;
+		cursor: pointer;
+		margin-left: -15%;
+		position: absolute;
+		opacity: 0;
+		left: 0;
+		right: auto;
+		color: #FFF;
+		top: 10px;
+		z-index: 9999;
+		background-color: transparent;
+
+		span,
+		span:after,
+		span:before {
+			background-color: #FFF;
+		}
+
+		&.on {
+			opacity: 1;
+
+			span {
+				background-color: transparent;
+			}
+		}
+	}
+
+	ul {
+		position: relative;
+	}
+
+	li {
+		display: block;
+		margin: 0;
+		border-top: 1px solid rgba(255, 255, 255, .13);
+
+		a {
+			// font-size: 16px;
+
+			padding: 10px;
+			display: block;
+ 
+		}
+	}
+}
