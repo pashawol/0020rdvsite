@@ -18,22 +18,32 @@ include ../blocks/s-news/_s-news.pug
 block variables
 	- let  mainPage= "default-body"
 block title
-	title Страницы
+	title Мероприятия
 block pagecontent
 	+mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
 	.container
-		+breadcrumb("Главная","Страницы")
+		+breadcrumb("Главная","Мероприятия")
 		.page-title 
-			h1 Страницы
-		ol.mono.h5
-			li
-				a(href="main.html") Мероприятия
-			li
-				a(href="02-event.html") Страница мероприятия
- 
+			h1 Запланированные мероприятия
+		//- +header-block()
+	//- +s-opportunities
+	//- +s-schema
+	//- +s-give
+	//- +s-q
+	//- +s-programm
+	//- +s-work
+	//- +s-price
+	//- +s-why
+	//- +s-form
+	//- +s-project
+	//- +s-tasks
+	//- +s-logo
+	//- +s-rew
+	+s-events
+	+s-news
 	+footer()
 	//- +s-form()
 	//- +s-contact()
