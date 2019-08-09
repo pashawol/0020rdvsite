@@ -1,14 +1,17 @@
 .s-form {
-	background-color: #f3f9fb;
-	.form-wrap{
-		max-width: 1020px;
-	}
-	p{
-		padding-bottom: 2rem;
-	}
-	h2{
-		max-width: 530px;
-	}
+	padding-top: rem(60);
+	padding-bottom: rem(40);
+ &__title{
+	 margin-left: auto;
+	 margin-right: auto;
+	 max-width: rem(840);
+	 @extend .h5;
+	 font-weight: 300;
+	 text-align: center;
+	 color: $dark;
+	 line-height: 1.42;
+	 padding-bottom: rem(35);
+ }
 	
 	//
 	@include media-breakpoint-up(xl) {}

@@ -21,6 +21,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: rem(1.2px);
+  position: relative;
   @include hover {
     color: $body-color;
     text-decoration: none;
@@ -74,19 +75,44 @@ fieldset:disabled a.btn {
 
 
 .btn-primary{
+  .btn-icon-wrap{ 
+    background-color: #ffffff ; 
+    .icon{
+      color:   $primary ;
+    }
+  }
   &:hover{
     color: $dark;
     background-color: $warning;
     border-color: $warning;
+    .btn-icon-wrap{ 
+      // background-color: #ffffff ; 
+      .icon{
+        color:   $dark;
+      }
+    }
   }
   &:active,
   &.active{
     color: #ffffff;
     background-color: $blue-dark;
     border-color: $blue-dark;
+    .btn-icon-wrap{ 
+      // background-color: #ffffff ; 
+      .icon{
+        color:   $blue-dark;
+      }
+    }
   }
 }
 .btn-warning{
+  .btn-icon-wrap{
+    color: $dark;
+		background-color: #ffffff; 
+		.icon{
+			color:  $dark;
+		}
+  }
   &:hover{
     background-color: $blue-dark;
     border-color: $blue-dark;
@@ -97,7 +123,13 @@ fieldset:disabled a.btn {
     background-color: #fff;
     border-color: #fff;
     color: $blue-dark;
-  
+    .btn-icon-wrap{
+      color: #ffffff; 
+      background-color: $primary !important;
+      .icon{
+        color:   #ffffff !important; 
+      }
+    }
   }
 }
 

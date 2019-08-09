@@ -15,35 +15,27 @@ extends layout/main.pug
 //- include ../blocks/s-q/_s-q.pug
 include ../blocks/s-events/_s-events.pug
 include ../blocks/s-news/_s-news.pug
+include ../blocks/s-useful/_s-useful.pug
+include ../blocks/s-list/_s-list.pug
+include ../blocks/s-spickers/_s-spickers.pug
+include ../blocks/s-to-get/_s-to-get.pug
 block variables
 	- let  mainPage= "default-body"
 block title
-	title Мероприятия
+	title Страница мероприятия
 block pagecontent
 	+mob-mnu()
 	+header()
 		+top-line()
-		+top-nav()
-	.container
+		+top-nav() 
+	+header-block-event()
 		+breadcrumb("Главная","Мероприятия")
-		.page-title 
-			h1 Запланированные мероприятия
-		//- +header-block()
-	//- +s-opportunities
-	//- +s-schema
-	//- +s-give
-	//- +s-q
-	//- +s-programm
-	//- +s-work
-	//- +s-price
-	//- +s-why
-	//- +s-form
-	//- +s-project
-	//- +s-tasks
-	//- +s-logo
-	//- +s-rew
-	+s-events
-	+s-news
+		 
+	+s-list
+	+s-useful
+	+s-spickers
+	+s-to-get
+	+s-form
 	+footer()
 	//- +s-form()
 	//- +s-contact()

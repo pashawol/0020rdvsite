@@ -3,13 +3,16 @@ mixin form-head()
 		input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 		block
 
-mixin input(placeholder,  t='text', label, name= t)
+mixin input(icon, placeholder,  t='text', label, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
 		else
 			+e.INPUT.input(type= t placeholder= placeholder name= name)&attributes(attributes)
 	+e.input-wrap
+		if icon
+			+e.icon-wrap
+				+icon(icon)
 		if label
 			label
 				+e.SPAN.title= label
@@ -46,6 +49,7 @@ mixin add-file(n)
 
 
 mixin polite()
-	+e.polite Нажимая “Рассчитать стоимость” вы соглашаетесь с условиями 
-		| 
-		a(href="#") пользовательского соглашения
+	+e.polite
+		+in-c()(checked)
+			+e.SPAN.text Отправляя заявку вы&nbsp;даете свое согласие на обработку персональных данных и&nbsp;соглашаетесь с&nbsp;
+				a(href="#").tdu.text-body условиями оферты

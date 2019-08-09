@@ -28,3 +28,49 @@ mixin header-block()
 								.col-xl-6
 									+e.btn.btn-warning(type="submit") рассчитать стоимость
 	// end header-block
+
+
+mixin header-block-event()
+	// start header-block-event
+	+b.header-block-event.bg-wrap
+		+pic("event-header","jpg","bg")(class="picture-bg")
+		.container
+			block
+			+e.label Вебинар
+			h1 Взгляд изнутри.
+				br
+				| Как увеличить продажи с&nbsp;помощью маркетплейсов
+			+e.row.row
+				+e.col.col-auto
+					+icon("picker")
+					| 22 июня, понедельник, 18:00
+				
+				+e.col.col-auto
+					+icon("clock")
+					| длительность: 1,5 часа     
+				
+				+e.col.col-auto
+					+icon("money")
+					| бесплатно
+			.row
+				.col-lg-auto
+					+e.btn.btn-warning(href="#") зарегистрироваться
+						.btn-icon-wrap
+							+icon("chevron-right2")
+						
+				.col-auto
+					+e.link(href="#")
+						+e.link-icon-wrap
+							+icon("picker-2")
+						+e.link-text Добавить в календарь
+				
+				.col-auto
+					+e.link(href="#")
+						+e.link-icon-wrap
+							+icon("print2")
+						+e.link-text распечатать
+				
+				
+	// end header-block
+
+

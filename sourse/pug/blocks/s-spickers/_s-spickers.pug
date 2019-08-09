@@ -2,8 +2,29 @@ mixin s-spickers()
 	// start s-spickers
 	+b.SECTION.s-spickers.section.block-with-lazy#s-spickers&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-spickers
-				
-			.row
+			+b.section-title--sm
+				h2 Спикеры:
+			- for (var x = 0; x < 2; x++)
+				+e.item.row
+					.col-sm-auto
+						+e.img-wrap
+							+pic("spicker","jpg","bg","lazy", 0)
+					.col
+						+e.title Имя Фамилия
+						+e.group
+							+e.group-title Область профессиональных интересов:
+							+e.group-text Развитие e-commerce направления в бизнесе.
+						
+						+e.group
+							+e.group-title Практический опыт:
+							+e.group-text Работал в проектах goods.ru и wikimart.ru, занимался развитием партнерской сети маркетплейсов.
+						
+						+e.group
+							+e.group-title Ключевые функциональные области:
+							+e.group-text 
+								ul
+									li Электронная коммерция
+									li Логистика интернет-магазинов
+									li Оптимизация контента интернет-магазинов 
+				// /+e.item
 	// end s-spickers

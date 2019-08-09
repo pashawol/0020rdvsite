@@ -184,14 +184,25 @@
           </div>
           <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
         </div>
-        <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="Ваше Имя" name="text" required="required"/>
+        <div class="form-wrap__input-wrap">
+          <div class="form-wrap__icon-wrap">
+            <svg class="icon icon-Ваше Имя ">
+              <use xlink:href="img/svg/sprite.svg#Ваше Имя"></use>
+            </svg>
+          </div><input class="form-wrap__input" type="text" placeholder="text" name="text" required="required"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+        <div class="form-wrap__input-wrap">
+          <div class="form-wrap__icon-wrap">
+            <svg class="icon icon-Ваш телефон ">
+              <use xlink:href="img/svg/sprite.svg#Ваш телефон"></use>
+            </svg>
+          </div><input class="form-wrap__input" type="text" placeholder="tel" name="text" required="required"/>
         </div>
         <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
         <div class="form-wrap__polite">
-          Нажимая “Рассчитать стоимость” вы соглашаетесь с условиями  <a href="#">пользовательского соглашения</a>
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Отправляя заявку вы&nbsp;даете свое согласие на обработку персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-body" href="#">условиями оферты</a></span>
+          </label>
         </div>
       </form>
     </div>

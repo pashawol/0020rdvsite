@@ -2,8 +2,54 @@ mixin s-to-get()
 	// start s-to-get
 	+b.SECTION.s-to-get.section.block-with-lazy#s-to-get&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-to-get
+			+b.section-title--sm
+				h2 Как добраться:
+				+e.text 
+					+e.icon-wrap
+						+icon("mark")
+					| г. Москва, ул. Киевская, 2
+				+e.text 
+					+e.icon-wrap
+						+icon("check-circle")
+					| При себе необходимо иметь паспорт или права
+
 				
-			.row
+		script.
+			var map;
+			function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 15,
+			//- center: new google.maps.LatLng(53.98205856875258,88.80421049999992),
+			center: new google.maps.LatLng(55.7432485689743,37.56293699999999),
+			mapTypeId: 'roadmap', 
+			});
+			var iconBase = 'img/svg/mark-color.svg';
+			var icons = {
+			
+			info: {
+			icon: iconBase
+			}
+			};
+			var features = [
+			{
+			position: new google.maps.LatLng(55.7432485689743,37.56293699999999),
+			type: 'info',
+			title: 'г. Москва, ул. Киевская, 2',
+			}, 
+			];
+			// Create markers.
+			features.forEach(function(feature) {
+			var marker = new google.maps.Marker({
+			position: feature.position,
+			icon: icons[feature.type].icon,
+			map: map,
+			title: feature.title,
+			//- title: title
+			});
+			});
+			}
+		//- script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10&callback=initMap')
+		script(async='', defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10&callback=initMap')
+		+e.map-wrap#map
+				
 	// end s-to-get

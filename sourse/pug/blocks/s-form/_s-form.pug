@@ -1,20 +1,35 @@
 mixin s-form()
 	// start s-form
-	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
-		+pic("form-bg","bg","lazy")(class="picture-bg")
+	+b.s-form.section.bg-light.block-with-lazy#s-form&attributes(attributes) 
 		.container 
-			h2 Трудно разобраться и&nbsp;нужен совет  специалиста?
-			p Вы&nbsp;сомневаетесь стоит&nbsp;ли покупать продукт?
+			+e.title Участие в&nbsp;вебинаре бесплатное.
 				br
-				| Наши коесультанты в&nbsp;кратчайшие срок проконсультрует вас.
+				| Количество место ограничено, необходима предварительная регистрация.
 			+form-wrap 
-				.row.row--sm
-					.col-lg-3.col-sm-6
-						+input("введите имя")
-					.col-lg-3.col-sm-6
-						+input("+7 ( ___ ) ___ - __ - __","tel")(required)
-					.col-lg-3.col-sm-6
+				.row
+					.col-lg-4.col-md-6
+						+input("user","Ф.И.О.")
+					.col-lg-4.col-md-6
+						+input("phone-form","Ваш телефон","tel")(required)
+					
+					.col-lg-4.col-md-6
+						+input("mail","Ваш e-mail","email")(required)
+					.col-lg-4.col-md-6
+						+input("company","Компания")
+					.col-lg-8
+						+e.input-wrap: +e.input.form-control
+							+e.icon-wrap
+								+icon("check-circle")
+							| ВЕБИНАР: Взгляд изнутри. Как увеличить продажи с помощью маркетплейсов
+					
+					.col-lg-4
+						+e.input-wrap: +e.input.form-control
+							+e.icon-wrap
+								+icon("picker")
+							| 19 июня 15:00 (МСК)
+					.col-lg-4
+						+e.btn.btn-primary(type="submit") зарегистрироваться
+							span.btn-icon-wrap
+								+icon("chevron-right2") 
 						+polite
-					.col-lg-3.col-sm-6
-						+e.btn.btn--arrow.btn-primary(type="submit") заказать консультанцию
 	// end s-form

@@ -177,12 +177,20 @@ $h: rem(4);
 			content: '';
 			height: $h;
 			background-color: $primary;
-			width: rem(30);
+			@include media-breakpoint-up(sm) {
+
+				width: rem(30);
+			}
+			width: rem(25);
 			display: block;
 			margin-bottom: $h;
 		}
 		&::after{
-			width: $h * 5;
+			@include media-breakpoint-up(sm) {
+
+				width: $h * 5;
+			}
+			width: $h * 4;
 
 		}
 	}
@@ -202,7 +210,7 @@ $h: rem(4);
 	will-change: transform;
 
 	&__inner {
-		background-color: #fff;
+		background-color: #f6fafc;
 		padding: rem(20) 15px;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;

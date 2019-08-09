@@ -1,13 +1,36 @@
 .form-wrap{
  	&__input-wrap{
 			@extend .form-group;
-			
+			position: relative;
+			margin-bottom: rem(20);
+		}
+		&__icon-wrap{
+			position: absolute;
+			text-align: center;
+			left: rem(25);
+			top: rem(20);
+			width: rem(17);
+			.icon{
+				font-size: rem(16);
+				color: $primary;
+				&-mail{
+					font-size: rem(13);
+
+				}
+				
+				&-check-circle{
+					font-size: rem(17);
+
+				}
+
+			}
 		}
 		&__input{
 			@extend .form-control;
+			// @extend .form-control-lg;
 		//  outline: 0 !important;
-		 resize: none;
-		 text-align: center;
+		 resize: none; 
+		 padding-left: rem(57);
 	 }
 	 &__title{
 		 line-height: 1.2;
@@ -18,9 +41,10 @@
  	&__btn{
 		 cursor: pointer;
 		 @extend .btn;
+		 @extend .btn-lg;
 		//  @extend .btn-warning;
-		 padding-left: rem(5);
-		 padding-right: rem(5);
+		//  padding-left: rem(5);
+		//  padding-right: rem(5);
 		//  @extend 
 		// display: block;
 		width: 100%;
@@ -30,14 +54,9 @@
  		display: block;
 	 }
 	 
-&__polite{
-	font-size: rem(12);
-	line-height: 1.2;
-	margin-bottom: 1rem;
-	a{
-		text-decoration: underline;
-		color: #1e7cab;
-	}
+&__polite{ 
+	// padding-top: ;
+	margin-top: rem(20);
 }
 }
 
@@ -104,8 +123,13 @@
 	margin-bottom: rem(20);
 	cursor: pointer;
 	position: relative;
-	padding-left: rem(35px);
+	padding-left: rem(25px);
 	display: inline-block;
+	color: $dark; 
+font-size: $em-base;
+font-weight: 300;
+	&__text{
+	}
 	&__input{
 		position: absolute;
 		// opacity: 0;
@@ -121,12 +145,13 @@
 		left: 0;
 		display: block;
 		top: rem(3); 
-		width: rem(20px);
-		height: rem(20px);
-		background-color: $primary;
+		width: rem(18px);
+		height: rem(18px);
+		border-radius: rem(3px);
+		border: 1px solid rgba(23, 79, 119, 0.2);
+		background-color: #ffffff;
 		@include mt;
-		position: absolute; 
-		margin-right: 10px;
+		position: absolute;  
 		&::after{  
 			content: '';
 			position: absolute;
@@ -138,10 +163,14 @@
  
 	&__input[type="checkbox"] + &__lab{
 		&::after{ 
-			content:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
+			content:   "";
 			position: absolute;
 			@include a-cent; 
 			opacity: 0;
+			width: rem(11px);
+			height: rem(11px);
+			border-radius: rem(3px);
+			background-color: $primary;
 		}
 	}
 
@@ -153,7 +182,7 @@
 	}
 
 	&__input:checked + &__lab{
-		background-color: $success;
+		// background-color: $success;
 		 
 		&::after{
 	

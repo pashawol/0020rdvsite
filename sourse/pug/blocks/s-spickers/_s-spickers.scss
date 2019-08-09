@@ -1,4 +1,63 @@
 .s-spickers {
+	padding-top: rem(0);
+	.section-title{
+		padding-bottom: em(15);
+	}
+	&__item{
+		padding-bottom: rem(20);
+	}
+	&__img-wrap{
+		position: relative;
+		border-radius: 50%;
+		border: rem(20) solid #f6fafc;
+		// overflow: hidden;
+		picture{
+			// background-color: $blue-dark;
+			box-shadow: -1px 10px $em-base rgba(23, 79, 119, 0.2);	
+			border-radius: 50%;
+			overflow: hidden;
+			position: relative;
+		}	
+		@include media-breakpoint-up(lg) {
+			width: rem(295);
+			height: rem(295); 
+			border-width: rem(27);
+		}
+ 
+		width: rem(220);
+		height: rem(220); 
+		
+		picture{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__group{
+		@extend .h6;
+		font-weight: normal; 
+		padding-bottom: rem(16);
+		
+	}
+	// @extend .h5; 
+	&__title{
+		@extend .h5; 
+		@extend .mono; 
+		font-weight: bold;
+		padding-top: rem(12);
+		padding-bottom: rem(12);
+	}
+	li{
+		list-style-type: none;
+		position: relative;
+		padding-left: rem(10);
+		&::before{
+			content: '•';
+			position: absolute;
+			left: 0;
+			color: $primary;
+			font-weight: 900;
+		}
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

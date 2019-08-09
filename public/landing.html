@@ -140,18 +140,29 @@
                       </div>
                       <div class="row row--sm">
                         <div class="col-lg-6">
-                          <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="введите имя" name="text"/>
+                          <div class="form-wrap__input-wrap">
+                            <div class="form-wrap__icon-wrap">
+                              <svg class="icon icon-введите имя ">
+                                <use xlink:href="img/svg/sprite.svg#введите имя"></use>
+                              </svg>
+                            </div><input class="form-wrap__input" type="text" name="text"/>
                           </div>
                           <!-- +e.input-wrap-->
                         </div>
                         <div class="col-lg-6">
-                          <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="tel" placeholder="+7 ( ___ ) ___ - __ - __" name="tel" required="required"/>
+                          <div class="form-wrap__input-wrap">
+                            <div class="form-wrap__icon-wrap">
+                              <svg class="icon icon-+7 ( ___ ) ___ - __ - __ ">
+                                <use xlink:href="img/svg/sprite.svg#+7 ( ___ ) ___ - __ - __"></use>
+                              </svg>
+                            </div><input class="form-wrap__input" type="text" placeholder="tel" name="text" required="required"/>
                           </div>
                           <!-- +e.input-wrap-->
                         </div>
                         <div class="col-xl-6">
                           <div class="form-wrap__polite">
-                            Нажимая “Рассчитать стоимость” вы соглашаетесь с условиями  <a href="#">пользовательского соглашения</a>
+                            <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Отправляя заявку вы&nbsp;даете свое согласие на обработку персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-body" href="#">условиями оферты</a></span>
+                            </label>
                           </div>
                         </div>
                         <div class="col-xl-6">
@@ -693,39 +704,85 @@
       </section>
       <!-- end s-why-->
       <!-- start s-form-->
-      <div class="s-form section block-with-lazy" id="s-form">
-        <!-- picture-->
-        <picture class="lazy picture-bg"> 
-          <source srcset="#" data-srcset="img/@2x/webp/form-bg.webp" type="image/webp" media="(min-width:576px)"/>
-          <source srcset="#" data-srcset="img/@1x/webp/form-bg.webp" type="image/webp"/>
-          <source srcset="#" data-srcset="img/@2x/form-bg.bg" type="image/bg" media="(min-width:576px)"/>
-          <source srcset="#" data-srcset="img/@1x/form-bg.bg" type="image/bg"/><img src="#" data-src="img/@2x/form-bg.bg" alt=""/>
-        </picture>
-        <!-- /picture -->
+      <div class="s-form section bg-light block-with-lazy" id="s-form"> 
         <div class="container"> 
-          <h2>Трудно разобраться и&nbsp;нужен совет  специалиста?</h2>
-          <p>Вы&nbsp;сомневаетесь стоит&nbsp;ли покупать продукт?<br/>Наши коесультанты в&nbsp;кратчайшие срок проконсультрует вас.</p>
+          <div class="s-form__title">Участие в&nbsp;вебинаре бесплатное.<br/>Количество место ограничено, необходима предварительная регистрация.
+          </div>
           <div class="form-wrap">
             <form> 
-              <div class="row row--sm">
-                <div class="col-lg-3 col-sm-6">
-                  <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="введите имя" name="text"/>
+              <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="form-wrap__input-wrap">
+                    <div class="form-wrap__icon-wrap">
+                      <svg class="icon icon-user ">
+                        <use xlink:href="img/svg/sprite.svg#user"></use>
+                      </svg>
+                    </div><input class="form-wrap__input" type="text" placeholder="Ф.И.О." name="text"/>
                   </div>
                   <!-- +e.input-wrap-->
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                  <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="tel" placeholder="+7 ( ___ ) ___ - __ - __" name="tel" required="required"/>
+                <div class="col-lg-4 col-md-6">
+                  <div class="form-wrap__input-wrap">
+                    <div class="form-wrap__icon-wrap">
+                      <svg class="icon icon-phone-form ">
+                        <use xlink:href="img/svg/sprite.svg#phone-form"></use>
+                      </svg>
+                    </div><input class="form-wrap__input" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
                   </div>
                   <!-- +e.input-wrap-->
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                  <div class="form-wrap__polite">
-                    Нажимая “Рассчитать стоимость” вы соглашаетесь с условиями  <a href="#">пользовательского соглашения</a>
+                <div class="col-lg-4 col-md-6">
+                  <div class="form-wrap__input-wrap">
+                    <div class="form-wrap__icon-wrap">
+                      <svg class="icon icon-mail ">
+                        <use xlink:href="img/svg/sprite.svg#mail"></use>
+                      </svg>
+                    </div><input class="form-wrap__input" type="email" placeholder="Ваш e-mail" name="email" required="required"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="form-wrap__input-wrap">
+                    <div class="form-wrap__icon-wrap">
+                      <svg class="icon icon-company ">
+                        <use xlink:href="img/svg/sprite.svg#company"></use>
+                      </svg>
+                    </div><input class="form-wrap__input" type="text" placeholder="Компания" name="text"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="col-lg-8">
+                  <div class="form-wrap__input-wrap">
+                    <div class="form-wrap__input form-control">
+                      <div class="form-wrap__icon-wrap">
+                        <svg class="icon icon-check-circle ">
+                          <use xlink:href="img/svg/sprite.svg#check-circle"></use>
+                        </svg>
+                      </div>ВЕБИНАР: Взгляд изнутри. Как увеличить продажи с помощью маркетплейсов
+                    </div>
                   </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                  <button class="form-wrap__btn btn btn--arrow btn-primary" type="submit">заказать консультанцию
+                <div class="col-lg-4">
+                  <div class="form-wrap__input-wrap">
+                    <div class="form-wrap__input form-control">
+                      <div class="form-wrap__icon-wrap">
+                        <svg class="icon icon-picker ">
+                          <use xlink:href="img/svg/sprite.svg#picker"></use>
+                        </svg>
+                      </div>19 июня 15:00 (МСК)
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <button class="form-wrap__btn btn-primary" type="submit">зарегистрироваться<span class="btn-icon-wrap">
+                      <svg class="icon icon-chevron-right2 ">
+                        <use xlink:href="img/svg/sprite.svg#chevron-right2"></use>
+                      </svg></span>
                   </button>
+                  <div class="form-wrap__polite">
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Отправляя заявку вы&nbsp;даете свое согласие на обработку персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-body" href="#">условиями оферты</a></span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </form>
@@ -1055,14 +1112,25 @@
           </div>
           <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
         </div>
-        <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="Ваше Имя" name="text" required="required"/>
+        <div class="form-wrap__input-wrap">
+          <div class="form-wrap__icon-wrap">
+            <svg class="icon icon-Ваше Имя ">
+              <use xlink:href="img/svg/sprite.svg#Ваше Имя"></use>
+            </svg>
+          </div><input class="form-wrap__input" type="text" placeholder="text" name="text" required="required"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+        <div class="form-wrap__input-wrap">
+          <div class="form-wrap__icon-wrap">
+            <svg class="icon icon-Ваш телефон ">
+              <use xlink:href="img/svg/sprite.svg#Ваш телефон"></use>
+            </svg>
+          </div><input class="form-wrap__input" type="text" placeholder="tel" name="text" required="required"/>
         </div>
         <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
         <div class="form-wrap__polite">
-          Нажимая “Рассчитать стоимость” вы соглашаетесь с условиями  <a href="#">пользовательского соглашения</a>
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Отправляя заявку вы&nbsp;даете свое согласие на обработку персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-body" href="#">условиями оферты</a></span>
+          </label>
         </div>
       </form>
     </div>

@@ -78,6 +78,19 @@ body {
 	}
 }
 .section-title {
+	&--sm{
+		@extend h5;
+		padding-top: rem(5);
+		padding-bottom: em(10);
+		h2{
+			@extend h5;
+			text-transform: uppercase;
+
+			&::after{
+				display: none;
+			}
+		}
+	}
 	// @extend h2;
 	// padding-bottom: em(10); 
 	// color: $blue-dark;
@@ -541,5 +554,27 @@ ol.mono.h5{
 	min-height: 500px;
 	li{
 		margin-bottom: 1rem;
+	}
+}
+
+.with-check-icon{
+	margin-bottom: 0;
+	li{
+		@extend .h6;
+		position: relative;
+		list-style-type: none;
+		padding-left: rem(23);
+		margin-bottom: rem(23);
+		&::before{
+			content: '';
+			position: absolute;
+			background-image: url(../img/svg/check-circle2.svg);
+			width: rem(15);
+			height: rem(15);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			left: 0;
+			top: rem(1);
+		}
 	}
 }
