@@ -1,0 +1,55 @@
+extends layout/main.pug
+//- include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+//- include ../blocks/s-opportunities/_s-opportunities.pug
+//- include ../blocks/s-schema/_s-schema.pug
+//- include ../blocks/s-give/_s-give.pug
+//- include ../blocks/s-programm/_s-programm.pug
+//- include ../blocks/s-work/_s-work.pug
+//- include ../blocks/s-price/_s-price.pug
+//- include ../blocks/s-why/_s-why.pug
+//- include ../blocks/s-project/_s-project.pug
+//- include ../blocks/s-tasks/_s-tasks.pug
+//- include ../blocks/s-logo/_s-logo.pug
+//- include ../blocks/s-rew/_s-rew.pug
+//- include ../blocks/s-q/_s-q.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-servises/_s-servises.pug
+include ../blocks/s-start/_s-start.pug
+include ../blocks/s-success/_s-success.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-time-to-develop/_s-time-to-develop.pug
+block variables
+	- let  mainPage= null
+block title
+	title Главная
+block pagecontent
+	+mob-mnu()
+	+header()(class="bg-wrap")
+		//- (data-bg="img/@2x/head-bg--main.jpg")
+		+pic("head-bg--main","jpg","bg")(class="picture-bg")
+		.container.lazy-background.d-none.d-lg-block
+			+e.img-wrap
+				+pic("header-img-main","png")
+		+top-line()
+		+top-nav() 
+		+header-block
+		//- +breadcrumb("Главная","Мероприятия")
+		 
+	+s-advantages
+	+s-about
+	+s-servises
+	+s-start
+	+s-success
+	+s-logo
+	+s-team
+	+s-news-main
+	+s-contact
+	+s-time-to-develop
+	+footer()
+	//- +s-form()
+	//- +s-contact()
+

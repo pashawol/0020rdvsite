@@ -1,9 +1,12 @@
-mixin item-news(i)
-	+e.col.col-lg-3.col-md-4.col-sm-6
+mixin item-news(i, lg)
+	+e.col&attributes(attributes)
 		+e.img-wrap.bg-wrap(href="#")
 			+pic("news-"+i,"jpg","bg","lazy",0)(class="picture-bg")
 		+e.small.text-primary 14 июля 2019
-		+e.title Заголовок-название релиза
+		if lg
+			.h5.mono.strong Как рассчитывается показатель валовой прибыли организации
+		else
+			+e.title Заголовок-название релиза
 		+e.text Lorem ipsum dolor sit amet, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis consectetur adipiscing sint occaecat...
 		+e.more(href="#") Подробнее 
 			+icon("chevron-right2")
@@ -17,8 +20,24 @@ mixin s-news()
 			.row
 				- for (var y = 1; y < 5; y++)
 					- for (var x = 1; x < 3; x++)
-						+item-news(x)
+						+item-news(x)(class=" col-lg-3 col-md-4 col-sm-6")
 			+e.btn-more(href="#") загрузить еще
 				.btn-icon-wrap
 					+icon("chevron-right2")
 	// end s-news
+
+	
+mixin s-news-main()
+	// start s-news
+	+b.SECTION.s-news.section.bg-light#s-news&attributes(attributes)
+		.container
+			+b.section-title--pb
+				h2 Полезное для бизнеса 
+			.row 
+				- for (var x = 1; x < 4; x++)
+					+item-news(x, "lg")(class=" col-lg-4 col-md-6")
+			+e.btn-more(href="#") загрузить еще
+				.btn-icon-wrap
+					+icon("chevron-right2")
+	// end s-news
+

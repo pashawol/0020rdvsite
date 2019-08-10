@@ -13,7 +13,14 @@ extends layout/main.pug
 //- include ../blocks/s-logo/_s-logo.pug
 //- include ../blocks/s-rew/_s-rew.pug
 //- include ../blocks/s-q/_s-q.pug
-include ../blocks/s-events/_s-events.pug
+//- include ../blocks/s-events/_s-events.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-servises/_s-servises.pug
+include ../blocks/s-start/_s-start.pug
+include ../blocks/s-success/_s-success.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-team/_s-team.pug
 include ../blocks/s-news/_s-news.pug
 block variables
 	- let  mainPage= "default-body"
@@ -30,7 +37,11 @@ block pagecontent
 			h1 Страницы
 		ol.mono.h5
 			li
+				a(href="main-page.html") Главная
+			
+			li
 				a(href="main.html") Мероприятия
+			
 			li
 				a(href="02-event.html") Страница мероприятия
  

@@ -1,0 +1,13 @@
+mixin s-start()
+	// start s-start
+	+b.SECTION.s-start.bg-primary#s-start&attributes(attributes)
+		.container.section
+			+b.section-title
+				img.lazy.res-i(src="#" data-src="img/svg/start-logo.svg", alt="")
+				+e.label начните продавать
+				h2 на маркетплейсе прямо сейчас 
+			+e.btn.btn-warning(href="#") узнать больше
+				.btn-icon-wrap
+					+icon("chevron-right2") 
+			+pic("start-img","png")(class="d-none d-sm-block")
+	// end s-start

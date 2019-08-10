@@ -1,0 +1,20 @@
+mixin s-advantages()
+	// start s-advantages
+	+b.s-advantages.section#s-advantages&attributes(attributes)
+		.container
+			mixin item(i,t)
+				+e.col.col-lg-3.col-sm-6
+					+e.img-wrap: img.res-i.lazy(src="#" data-src=`img/svg/s-advantages-i-${i}.svg`, alt="")
+					+e.title= t
+					block
+				// /+e.col.col-lg-3.col-sm-6
+			.row
+				+item("1","Максимальная управляемость")
+					+e.text Мы&nbsp;используем современные системы, которые всегда расскажут Вам о&nbsp;состоянии проекта и&nbsp;сделают коммуникацию команд эффективной
+				+item("2","Опыт крупных проектов")
+					+e.text Мы&nbsp;готовы применить у&nbsp;Вас успешный опыт реализации комплексных проектов в&nbsp;различных сферах деятельности
+				+item("3","Гарантия результата")
+					+e.text Мы&nbsp;с&nbsp;ответственностью и профессионализмом относимся к&nbsp;выполнению проектных работ
+				+item("4","Постпроектная поддержка")
+					+e.text SLA по&nbsp;завершению проекта гарантирует профессиональную поддержку Ваших сотрудников на&nbsp;высоком уровне
+	// end s-advantages

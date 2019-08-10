@@ -1,0 +1,20 @@
+mixin s-time-to-develop()
+	// start s-time-to-develop
+	+b.SECTION.s-time-to-develop.bg-light#s-time-to-develop&attributes(attributes)
+		.container
+			.row
+				.col-xl-7.col.section
+					+b.section-title
+						h2 Пора развиваться?
+					.h5.fw-300 Обращайтесь - мы проведем аудит бизнес-процессов и поможем выбрать лучшую систему автоматизации на платформе 1С
+					+e.btn-wrap
+						+e.btn.btn-primary(href="#") задать вопрос
+							.btn-icon-wrap
+								+icon("chevron-right2") 
+						
+						+e.btn.btn-outline-primary(href="#") заказать звонок
+							.btn-icon-wrap
+								+icon("chevron-right2") 
+				.col-xl.col-auto.text-center.d-none.d-md-block
+					+pic("s-time-to-develop-img","png","",0)
+	// end s-time-to-develop

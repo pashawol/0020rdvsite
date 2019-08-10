@@ -9,12 +9,7 @@
   @include media-breakpoint-up(sm) {
 
   }
-  position: relative;
-  // position: fixed;
-  // width: 100%;
-  // left: 0;
-  // top: 0;
-  // background-color: #ffffff;
+  position: relative; 
   z-index: 100;
   
   .row{
@@ -24,12 +19,8 @@
     @include media-breakpoint-up(sm) {
 
       max-width: rem(410);
-    }
-    // max-width: rem(120);
-    // position: relative;
-    // overflow: hidden;
-    a{
-      // width: rem(390);
+    } 
+    a{ 
       @extend .text-body;
       text-decoration: none;
       // display: inline-flex;
@@ -58,7 +49,7 @@
       margin-right: -10px;
 
     }
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
 
       color: #ffffff !important;
     }

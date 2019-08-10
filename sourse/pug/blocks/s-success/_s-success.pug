@@ -1,0 +1,31 @@
+mixin s-success()
+	// start s-success
+	+b.SECTION.s-success.section.block-with-lazy#s-success&attributes(attributes)
+		.container
+			+b.section-title 
+				h2 Успех наших клиентов
+				
+			.row
+				mixin item(l,p)
+					+e.col.col-lg-4
+						+e.item.bg-wrap
+							+pic("success-img","jpg","bg")(class="picture-bg")
+							+e.label= l
+							+e.text= p
+							+e.footer: +e.more(href="#") Подробнее
+								+icon("chevron-right2")
+					// /+e.col.col-lg-4
+					
+				+item("e-commerce","Комплексная автоматизация бизнес-процессов маркетплейса Goods")
+				+item("СМИ","Автоматизация учета продаж и управленческой отчетности Ведомостей")
+				+item("нефтегазовый сектор","Автоматизация документо-оборота и казначейства нефтегазовой компании")
+			+e.btn-wrap
+				+e.btn.btn-outline-primary(href="#") загрузить еще
+					.btn-icon-wrap
+						+icon("chevron-right2") 
+				
+				+e.btn.btn-primary(href="#") все кейсы
+					.btn-icon-wrap
+						+icon("chevron-right2") 
+				
+	// end s-success

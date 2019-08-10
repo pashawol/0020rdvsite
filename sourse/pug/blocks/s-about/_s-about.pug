@@ -1,0 +1,16 @@
+mixin s-about()
+	// start s-about
+	+b.SECTION.s-about.section.block-with-lazy#s-about&attributes(attributes)
+		.container
+			.row
+				.col
+					+b.section-title
+						+e.label.text-primary   о компании
+						h2 Поможем расти вашему бизнесу
+					p Мы&nbsp;любим и&nbsp;уважаем своих клиентов. Мы&nbsp;берем на&nbsp;себя  ответственность за&nbsp;качество оказанных нами услуг и&nbsp;прилагаем все усилия для решения проблем бизнеса. Наша задача&nbsp;&mdash; взять на&nbsp;себя всю проектную работу, чтобы вы&nbsp;не&nbsp;отвлекались от&nbsp;своих прямых задач и&nbsp;развивали свой бизнес.
+					+e.btn.btn-primary(href="#") подробнее
+						.btn-icon-wrap
+							+icon("chevron-right2") 
+				.col-auto.d-none.d-lg-block
+					+pic("about",'png')
+	// end s-about

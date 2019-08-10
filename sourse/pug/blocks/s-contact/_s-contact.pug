@@ -2,8 +2,72 @@ mixin s-contact()
 	// start s-contact
 	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-contact
-				
-			.row
+			+e.row.row
+				.col-lg-5
+					+b.section-title
+						h2 Наши контакты
+					+e.text--lg 
+						+icon('mark')
+						| Москва, Красносельская нижн.&nbsp;ул., д.&nbsp;35&nbsp;стр.&nbsp;64, офис 225
+					.row
+						.col-sm-6
+							+e.text
+								+icon('metro')
+								| Бауманская
+
+
+						
+						.col-sm-6
+							+e.text.text-body(href="tel:8(495)127-03-47")
+								+icon('tel2')
+								| 8 (495) 127-03-47
+						.col-sm-6
+							+e.text
+								+icon('clock')
+								| пн-пт: 10:00 - 19:00
+						.col-sm-6
+							+e.text.text-body(href="mailto:info@rdv-it.ru") 
+								+icon('mail')
+								| info@rdv-it.ru
+					+e.btn.btn-primary(href="#") написать нам
+						.btn-icon-wrap
+							+icon("chevron-right2") 
+				.col
+					script.
+						var map;
+						function initMap() {
+						map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 15,
+						//- center: new google.maps.LatLng(53.98205856875258,88.80421049999992),
+						center: new google.maps.LatLng(55.77589456893904,37.67501949999998),
+						mapTypeId: 'roadmap', 
+						});
+						var iconBase = 'img/svg/mark-color.svg';
+						var icons = {
+						
+						info: {
+						icon: iconBase
+						}
+						};
+						var features = [
+						{
+						position: new google.maps.LatLng(55.77589456893904,37.67501949999998),
+						type: 'info',
+						title: 'г. Москва, ул. Киевская, 2',
+						}, 
+						];
+						// Create markers.
+						features.forEach(function(feature) {
+						var marker = new google.maps.Marker({
+						position: feature.position,
+						icon: icons[feature.type].icon,
+						map: map,
+						title: feature.title,
+						//- title: title
+						});
+						});
+						}
+					//- script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10&callback=initMap')
+					script(async='', defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10&callback=initMap')
+					+e.map-wrap#map
 	// end s-contact

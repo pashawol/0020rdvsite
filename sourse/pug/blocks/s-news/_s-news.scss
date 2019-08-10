@@ -31,6 +31,8 @@
 		.icon{
 			font-size: rem(9);
 			margin-left: rem(5);
+			position: relative;
+			top: rem(-2);
 		}
 	}
 	&__title{
@@ -68,6 +70,10 @@
 		
 	}
 		 
+	.section-title--pb{
+		padding-bottom: rem(30);
+		padding-top: rem(30);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

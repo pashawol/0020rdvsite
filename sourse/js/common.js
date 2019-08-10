@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
 	JSCCommon.CustomInputFile(); 
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/2.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/3.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -39,78 +39,83 @@ jQuery(document).ready(function ($) {
 	// 	}; 
 	// }); 
 
-		var icon = '<?xml version="1.0" encoding="UTF-8"?><svg id="SVGDoc" width="26" height="81" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 26 81"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>Фигура 11 копия 5</title><path d="M3.77782,80.67258c-0.47905,0 -0.96529,-0.10769 -1.42416,-0.33587c-1.58648,-0.78467 -2.23504,-2.70851 -1.44715,-4.2924l17.58727,-35.3823v0l-17.58727,-35.38463c-0.78789,-1.58506 -0.13933,-3.50715 1.44715,-4.29298c1.59069,-0.78933 3.51163,-0.1397 4.30022,1.44535l19.00371,38.23226v0l-19.00371,38.22993c-0.56065,1.12753 -1.69598,1.77948 -2.87605,1.78064z" fill="#ffffff" fill-opacity="1"></path></g></g><svg>';
+		var icon = '<?xml version="1.0" encoding="UTF-8"?> 	<svg  width="13" height="24" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 13 24"><defs></defs><desc>Generated with Avocode.</desc><g><g><title>стрелка</title><path d="M12.65329,11.14313l-10.61618,-10.78975c-0.46587,-0.47204 -1.22058,-0.47204 -1.68765,0c-0.46575,0.4725 -0.46575,1.23957 0,1.71207l9.77421,9.93349v0l-9.77302,9.93349c-0.46575,0.4725 -0.46575,1.24003 0,1.71344c0.46587,0.4725 1.22178,0.4725 1.68765,0l10.61618,-10.78929c0.45884,-0.46747 0.45884,-1.24735 -0.00119,-1.71344z" fill="#174f77" fill-opacity="1"></path></g></g></svg>';
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
-	$('.s-work__slider--js').slick({
-		slidesToShow: 1,
+	var sliderDefault = {
 		slidesToScroll: 1,
-		dots: false,
-		speed: 650,
 		infinite: true,
-		loop: true,
+		speed: 650,
+		loop: true, 
+		dots: false,
+		mobileFirst: true, 
+
+	}
+	$('.s-work__slider--js').slick( {
+		...sliderDefault,
+		slidesToShow: 1,
 		arrows: true, 
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 	});
-	$('.s-logo__slider--js').slick({
-		slidesToShow: 8,
-		slidesToScroll: 1,
-		dots: false,
-		speed: 650,
-		infinite: true,
-		loop: true,
+	$('.s-logo__slider--js').slick( {
+		...sliderDefault,
+		slidesToShow: 2,
 		arrows: true, 
 		prevArrow: arrr2,
-		nextArrow: arrl2,
+		nextArrow: arrl2, 
 		responsive: [{
 
       breakpoint: 1200,
       settings: {
         slidesToShow: 6, 
-      }
-
+      } 
 		}, 
 		{
       breakpoint: 992,
       settings: {
         slidesToShow: 5, 
-      }
-
-		}, 
-		
+      } 
+		},  
 		{
       breakpoint: 768,
       settings: {
-        slidesToShow: 4,
-        
-      }
-
-		}, 
-
-
+        slidesToShow: 4, 
+      } 
+		},  
 		{ 
       breakpoint: 576,
       settings: {
         slidesToShow: 3, 
-      }
-
-		},
-		
-		{ 
-      breakpoint: 440,
-      settings: {
-        slidesToShow: 2, 
-      }
-
-		},
-
-	 ]
+      } 
+		} ]
 	});
 
- 
+	
+	$('.s-team__slider--js').slick({
+		...sliderDefault,
+		dots: true,
+		arrows: true, 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		slidesToShow: 1,
+		responsive: [{ 
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3, 
+      } 
+		},  
+		{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2, 
+			} }
+		 ]
+	});
+
+	
 	// /закрыть/открыть мобильное меню
 
 	function heightses() {

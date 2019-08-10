@@ -2,15 +2,15 @@ mixin s-logo()
 	// start s-logo
 	+b.SECTION.s-logo.section.bg-light.block-with-lazy#s-logo&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 С нами уже работают
+			+b.section-title
+				h2 Нам доверяют
 			+e.slider--js
-				- for (var x = 1; x < 9; x++)
-					div: +pic('logo-'+x,"jpg","","lazy",0)
-					//- img.res-i(src=`img/@2x/logo-${x}.jpg`, alt="")
+				- for (var x = 1; x < 7; x++)
+					+e.slide: img.res-i(src="#" data-lazy=`img/@2x/logo-${x}.png`, alt="")
 				
-				- for (var x = 1; x < 9; x++)
-					div: +pic('logo-'+x,"jpg","","lazy",0)
-					//- img.res-i(src=`img/@2x/logo-${x}.jpg`, alt="")
+				//- - for (var x = 1; x < 9; x++)
+				//- 	div
+				//- 		//- img(lazy=`img/@2x/`, alt="")
+				//- 	img.res-i(src="#" data-lazy=`img/@2x/logo-${x}.png`, alt="")
 				
 	// end s-logo
