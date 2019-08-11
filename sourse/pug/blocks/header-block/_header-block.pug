@@ -1,16 +1,19 @@
-mixin header-block()
+mixin header-block(l,h1,p)
 	// start header-block
 	+b.header-block#header-block
 		.container
 			.row
 				.col-lg-8
 					+e.text-block
+						if block
+							block
+						else
 							+e.label Комплексная автоматизация
 							h1 вашего бизнеса на&nbsp;платформе&nbsp;1С
 							+e.text Всегда предлагаем только профессиональный комплексный подход, продуманные и&nbsp;эффективные решения
-							+e.btn.btn-primary(href="#") подробнее
-								.btn-icon-wrap
-									+icon("chevron-right2") 
+						+e.btn.btn-primary(href="#") подробнее
+							.btn-icon-wrap
+								+icon("chevron-right2") 
 	// end header-block
 
 

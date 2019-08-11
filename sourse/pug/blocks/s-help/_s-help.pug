@@ -1,0 +1,12 @@
+mixin s-help()
+	// start s-help
+	+b.SECTION.s-help.section.bg-primary.text-white.bg-wrap#s-help&attributes(attributes)
+		.container
+			+b.section-title
+				h2 поможем расти вашему бизнесу
+				.h5.fw-300 RDV Маркет&nbsp;&mdash; решение для оптимизации бизнес-процессов продавца с&nbsp;маркетплейсом
+			+e.btn.btn-warning(href="#") подробнее
+				.btn-icon-wrap
+					+icon("chevron-right2") 
+		+pic("help-bg","jpg","bg")(class="picture-bg")
+	// end s-help

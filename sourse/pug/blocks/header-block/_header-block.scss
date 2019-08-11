@@ -2,12 +2,15 @@
 	display: block;
 	@include media-breakpoint-up(xl) {
 
-		padding-top: rem(90);
+		padding-top: rem(30);
 		padding-bottom: rem(175);
 	}
-	padding-top: rem(60);
+	padding-top: rem(10);
 	padding-bottom: rem(70);
-
+	.breadcrumb{
+		margin-bottom: 0;
+		padding: 0;
+	}
 	&__text-block{
 		// width: 70%;
 
@@ -16,6 +19,11 @@
 		position: relative; 
 	}
 	&__label{
+		@include media-breakpoint-up(xl) {
+
+			margin-top: rem(60);
+		}
+		margin-top: rem(30);
 		background-color: $primary;
 		display: inline-block;
 		color: #ffffff;

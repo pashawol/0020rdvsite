@@ -7,6 +7,20 @@ mixin input(icon, placeholder,  t='text', label, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
+		
+		else if t== "select"
+			+e.SELECT.input.form-control( name= name)&attributes(attributes) placeholder
+				option(value="#")
+					= placeholder 
+					| 1
+				
+				option(value="#")
+					= placeholder 
+					| 12
+				option(value="#")
+					= placeholder 
+					| 13
+
 		else
 			+e.INPUT.input(type= t placeholder= placeholder name= name)&attributes(attributes)
 	+e.input-wrap

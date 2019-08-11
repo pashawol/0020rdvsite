@@ -63,10 +63,28 @@
     &::before{
       @include media-breakpoint-up(sm) {
 
-        @include bg("head-texture.jpg");
+        
         background-position: left bottom;
       }
     }
+    &.container--main{
+      &::before{
+        @include media-breakpoint-up(sm) {
+  
+          @include bg("head-texture.jpg"); 
+        }
+      }
+    }
+    
+    &.container--e-com{
+      &::before{
+        @include media-breakpoint-up(sm) {
+  
+          @include bg("head-texture-2.jpg"); 
+        }
+      }
+    }
+
   }
 }
 .col-lg-8,
