@@ -9,10 +9,9 @@ mixin input(icon, placeholder,  t='text', label, name= t)
 			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
 		
 		else if t== "select"
-			+e.SELECT.input.form-control( name= name)&attributes(attributes) placeholder
-				option(value="#")
-					= placeholder 
-					| 1
+			+e.SELECT.input.form-control( name= name)&attributes(attributes)
+				option(value="#" disabled selected)
+					= placeholder
 				
 				option(value="#")
 					= placeholder 
