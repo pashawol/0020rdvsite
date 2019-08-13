@@ -6,7 +6,9 @@
 		@include media-breakpoint-up(xl) {
 			margin-bottom: rem(60);
 			display: flex;
-			justify-content: space-between
+			justify-content: space-between;
+			margin-left: rem(-10);
+			margin-right: rem(-10);
 		}
 	}
 	&__item{
@@ -17,7 +19,7 @@
 		@include media-breakpoint-up(xl) {
 			max-width: 400px;
 			margin: 0 rem(10);
-			padding-top: rem(40);
+			padding-bottom: rem(40);
 		}
 	}
 	&__item-title{
