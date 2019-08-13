@@ -3,23 +3,34 @@
 		margin-bottom: rem(72);
 	}
 	&__wrapper{
+		margin-left: rem(-30);
+		margin-right: rem(-30);
+		padding-left: rem(20);
+		padding-right: rem(20);
+		margin-bottom: rem(40);
 		@include media-breakpoint-up(xl) {
 			margin-bottom: rem(60);
-			display: flex;
-			justify-content: space-between;
-			margin-left: rem(-10);
-			margin-right: rem(-10);
 		}
 	}
+	.slick-track{
+		display: flex;
+	}
+	&__item-wrapper{
+		padding: 0 rem(10) rem(30);
+		height: auto;
+	}
 	&__item{
+		float: none;
 		margin-bottom: rem(30);
 		width: 100%;
+		height: 100%;
 		padding: rem(12) rem(14);
 		box-shadow: -1px 10px $em-base rgba(23, 79, 119, 0.2);
+		display: flex;
+		flex-direction: column;
 		@include media-breakpoint-up(xl) {
-			max-width: 400px;
-			margin: 0 rem(10);
 			padding-bottom: rem(40);
+			
 		}
 	}
 	&__item-title{
@@ -61,6 +72,7 @@
 		max-width: rem(200);
 		@extend .h6;
 		font-weight: 400;
+
 	}
 	&__item-price{
 		@extend .h5;
@@ -70,6 +82,9 @@
 		span{
 			color: $primary;
 		}
+		@include media-breakpoint-down(xs) {
+			font-size: rem(16)
+	}
 	}
 	.server-price{
 		.s-tariffs__item-text{
@@ -93,6 +108,59 @@
 		max-width: rem(400);
 		font-size: rem(14);
 		padding: rem(20) rem(13);
+	}
+	.r{
+		border-radius: 0 rem(28) rem(28) 0;
+	}
+	.l{
+		border-radius: rem(28) 0 0 rem(28);
+	}
+	.slick-arrow{
+		background-color: #2080a9;
+		width: rem(40);
+		height: rem(55);
+		line-height: rem(50);
+		text-align: center;
+		margin-top: rem(-20);
+		opacity: .7;
+		@include media-breakpoint-down(md) {
+				top: 101%;
+		}
+		@include mt;
+		svg{
+			width: rem(13);
+			height: rem(23);
+		}
+		path{
+			fill: #fff;
+		}
+		&:hover{
+			opacity: 1;
+		}
+	}
+	.r{
+		right: rem(-20);
+		@include media-breakpoint-down(md) {
+				right: 35%;
+		}
+		@include media-breakpoint-down(sm) {
+				right: 30%;
+		}
+		@include media-breakpoint-down(xs) {
+				right: 25%;
+		}
+	}
+	.l{
+		left: rem(-20);
+		@include media-breakpoint-down(md) {
+				left: 35%;
+		}
+		@include media-breakpoint-down(sm) {
+				left: 30%;
+		}
+		@include media-breakpoint-down(xs) {
+				left: 25%;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
