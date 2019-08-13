@@ -62,3 +62,35 @@ mixin s-form-03()
 						+polite
 	// end s-form
 
+
+mixin s-form-conditions()
+	// start s-form
+	+b.s-form.s-form-conditions.section.block-with-lazy#s-form&attributes(attributes) 
+		.container 
+			.section-title
+				.h5 <span>Закажите обратный звонок,</span> наши специалисты ответят на все вопросы
+			+form-wrap 
+				.row.justify-content-center
+					.col-lg-3.col-md-6
+						+input("company","Название организации")
+					.col-lg-3.col-md-6
+						+input("user","Ваше имя")
+					.col-lg-3.col-md-6
+						+input("phone-form","Ваш телефон","tel")(required)
+					
+					.col
+						+input("mail","Ваш e-mail","email")(required)
+					.col-lg-4
+						+e.btn.btn-primary(type="submit") отправить
+							span.btn-icon-wrap
+								+icon("chevron-right2") 
+						+polite
+					//- .col-lg-4.col-md-6
+					//- 	+input("mail","Ваш e-mail","email")(required)
+					//- .col-lg-4
+					//- 	+e.btn.btn-primary(type="submit") отправить
+					//- 		span.btn-icon-wrap
+					//- 			+icon("chevron-right2") 
+					//- 	+polite
+	// end s-form
+

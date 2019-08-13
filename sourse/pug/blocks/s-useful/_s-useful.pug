@@ -11,3 +11,30 @@ mixin s-useful()
 
 				li руководителям логистических подразделений.
 	// end s-useful
+
+mixin s-conditions-useful()
+	// start s-conditions-useful
+	+b.SECTION.s-useful.s-conditions-useful.bg-light.section.block-with-lazy#s-useful&attributes(attributes)
+		.container
+			+b.section-title--sm
+				h2 Условия подписки: 
+			ul.with-check-icon
+				li Простая смена тарифа – просто сообщите менеджеру, какой тариф хотите использовать сейчас
+
+				li Все тарифы включают в себя дополнительного пользователя для технического подключения и интеграции системы
+			+b.section-title--sm
+				h2 Подписка включает в себя:
+			ul.with-check-icon
+				li Демонстрацию возможностей сервиса
+
+				li Регулярные обновления для всех пользователей
+
+				li Поддержку изменений API со стороны маркетплейсов
+
+				li Оперативную техническую поддержку и консультации по работе сервиса
+			+b.section-title--sm
+				h2 Серверная установка
+			
+			+e.text Требует наличия лицензии 1С: Управление торговлей&nbsp;11 (серверная версия). Наши&nbsp;менеджеры проконсультируют по&nbsp;вопросам стоимости и&nbsp;порядка приобретения.
+
+	// end s-conditions-useful

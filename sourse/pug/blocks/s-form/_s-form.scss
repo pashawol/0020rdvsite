@@ -42,3 +42,18 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
+
+.s-form-conditions{
+	.section-title{
+		text-align: center;
+		font-family: "Apercu Pro";
+		span{
+			color: $primary;
+		}
+	}
+	.form-wrap{
+		&__input{
+			background-color: $light;
+		}
+	}
+}
