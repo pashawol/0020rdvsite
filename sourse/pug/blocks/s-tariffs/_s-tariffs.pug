@@ -3,54 +3,57 @@ mixin s-tariffs()
 	+b.SECTION.s-tariffs.section#s-tariffs&attributes(attributes)
 		.container
 			+e.wrapper
-				+e.item
-					+e.item-title.bg-primary Стартап
-					+e.UL.list
-						+e.LI.list-item 
-							+e.item-text <strong>Цена подписки в месяц / при оплате за год</strong>
-							+e.item-price <span>7 990 ₽</span>
-						+e.LI.list-item 
-							+e.item-text Цена подписки в месяц / при оплате за 6 мес
-							+e.item-price 8 490 ₽
-						+e.LI.list-item 
-							+e.item-text Цена подписки в месяц / при оплате за 3 мес
-							+e.item-price 8 990 ₽
-						+e.LI.list-item 
-							+e.item-text Цена подписки в месяц / при оплате за 1 мес
-							+e.item-price 9 990 ₽
-						+e.LI.list-item 
-							+e.item-text Макс. количество одновременно работающих пользователей
-							+e.item-price до 5
-				+e.item 
-					+e.item-title профи
-					+e.UL.list
-						+e.LI.list-item 
-							+e.item-text <strong>Цена подписки в месяц / при оплате за год</strong>
-							+e.item-price <span>11 990 ₽</span>
-						+e.LI.list-item 
-							+e.item-text Цена подписки в месяц / при оплате за 6 мес
-							+e.item-price 12 740 ₽
-						+e.LI.list-item 
-							+e.item-text Цена подписки в месяц / при оплате за 3 мес
-							+e.item-price 13 490 ₽
-						+e.LI.list-item 
-							+e.item-text Цена подписки в месяц / при оплате за 1 мес
-							+e.item-price 14 990 ₽
-						+e.LI.list-item 
-							+e.item-text Макс. количество одновременно работающих пользователей
-							+e.item-price до 5
-				+e.item
-					+e.item-title.bg-warning.color Серверная установка
-					+e.UL.list.server-price
-						+e.LI.list-item 
-							+e.item-text <strong>Стоимость программного продукта</strong>
-							+e.item-price <span>49 900 ₽</span>
-						+e.LI.list-item 
-							+e.item-text Цена подписки  на сопровождение / в месяц
-							+e.item-price 9 990 ₽
-						+e.LI.list-item 
-							+e.item-text Макс. количество одновременно работающих пользователей
-							+e.item-price не ограничено
+				+e.item-wrapper
+					+e.item
+						+e.item-title.bg-primary Стартап
+						+e.UL.list
+							+e.LI.list-item 
+								+e.item-text <strong>Цена подписки в месяц / при оплате за год</strong>
+								+e.item-price <span>7 990 ₽</span>
+							+e.LI.list-item 
+								+e.item-text Цена подписки в месяц / при оплате за 6 мес
+								+e.item-price 8 490 ₽
+							+e.LI.list-item 
+								+e.item-text Цена подписки в месяц / при оплате за 3 мес
+								+e.item-price 8 990 ₽
+							+e.LI.list-item 
+								+e.item-text Цена подписки в месяц / при оплате за 1 мес
+								+e.item-price 9 990 ₽
+							+e.LI.list-item 
+								+e.item-text Макс. количество одновременно работающих пользователей
+								+e.item-price до 5
+				+e.item-wrapper
+					+e.item 
+						+e.item-title профи
+						+e.UL.list
+							+e.LI.list-item 
+								+e.item-text <strong>Цена подписки в месяц / при оплате за год</strong>
+								+e.item-price <span>11 990 ₽</span>
+							+e.LI.list-item 
+								+e.item-text Цена подписки в месяц / при оплате за 6 мес
+								+e.item-price 12 740 ₽
+							+e.LI.list-item 
+								+e.item-text Цена подписки в месяц / при оплате за 3 мес
+								+e.item-price 13 490 ₽
+							+e.LI.list-item 
+								+e.item-text Цена подписки в месяц / при оплате за 1 мес
+								+e.item-price 14 990 ₽
+							+e.LI.list-item 
+								+e.item-text Макс. количество одновременно работающих пользователей
+								+e.item-price до 5
+				+e.item-wrapper
+					+e.item
+						+e.item-title.bg-warning.color Серверная установка
+						+e.UL.list.server-price
+							+e.LI.list-item 
+								+e.item-text <strong>Стоимость программного продукта</strong>
+								+e.item-price <span>49 900 ₽</span>
+							+e.LI.list-item 
+								+e.item-text Цена подписки  на сопровождение / в месяц
+								+e.item-price 9 990 ₽
+							+e.LI.list-item 
+								+e.item-text Макс. количество одновременно работающих пользователей
+								+e.item-price не ограничено
 			+e.btn-wrapper
 				+e.A.btn.btn-primary(href="#") подобрать тариф
 					span.btn-icon-wrap
