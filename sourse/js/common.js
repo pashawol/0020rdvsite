@@ -94,7 +94,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	
-	$('.s-team__slider--js').slick({
+	$('.s-team__slider--js, .s-tariffs__wrapper').slick({
 		...sliderDefault,
 		dots: true,
 		arrows: true, 
