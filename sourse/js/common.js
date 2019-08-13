@@ -116,17 +116,17 @@ jQuery(document).ready(function ($) {
 	});
 	
 	
-	// $('.s-swiper__slider--js').slick({
-	// 	...sliderDefault,
-	// 	dots: true,
-	// 	arrows: true, 
-	// 	prevArrow: arrr2,
-	// 	nextArrow: arrl2,
-	// 	fade: true,
-	// 	// prevArrow: ".s-swiper__prev-btn",
-	// 	// nextArrow: ".s-swiper__next-btn",
-	// 	slidesToShow: 1,
-	// });
+	$('.s-swiper__slider--js').slick({
+		...sliderDefault,
+		dots: true,
+		arrows: true, 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		fade: true,
+		// prevArrow: ".s-swiper__prev-btn",
+		// nextArrow: ".s-swiper__next-btn",
+		slidesToShow: 1,
+	});
 
 	
 	// /закрыть/открыть мобильное меню
