@@ -1,6 +1,12 @@
 .s-useful {
 	padding-bottom: rem(20);
-	
+	&__text{
+		color: $body-color;
+	font-family: "Apercu Pro";
+	font-size: $h6-font-size;
+	font-weight: 500;
+	line-height: 22px;
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -26,4 +32,10 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+}
+.s-conditions-useful{
+	padding: rem(70) 0;
+	.s-useful__text{
+		max-width: rem(750);
+	}
 }

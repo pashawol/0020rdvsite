@@ -98,10 +98,6 @@
 }
 @mixin mt($s: .36){
   transition: all #{$s}s ;}
-@mixin c-white{
-  color: #fff;}
-@mixin c-dark{
-  color: #000  ;}
 
 
 @mixin fontello($icon, $fz){
