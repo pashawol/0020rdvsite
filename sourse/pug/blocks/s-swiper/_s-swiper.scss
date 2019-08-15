@@ -224,3 +224,8 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
+
+.market-swiper{
+	background: transparent;
+	transform: translateY(-46%);
+}
