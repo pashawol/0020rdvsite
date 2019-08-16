@@ -54,14 +54,24 @@ jQuery(document).ready(function ($) {
 
 	}
 	$('.s-work__slider--js').slick( {
-		...sliderDefault,
+		slidesToScroll: 1,
+		infinite: true,
+		speed: 650,
+		loop: true, 
+		dots: false,
+		mobileFirst: true, 
 		slidesToShow: 1,
 		arrows: true, 
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 	});
 	$('.s-logo__slider--js').slick( {
-		...sliderDefault,
+		slidesToScroll: 1,
+		infinite: true,
+		speed: 650,
+		loop: true, 
+		dots: false,
+		mobileFirst: true, 
 		slidesToShow: 2,
 		arrows: true, 
 		prevArrow: arrr2,
@@ -95,7 +105,12 @@ jQuery(document).ready(function ($) {
 
 	
 	$('.s-team__slider--js, .s-tariffs__wrapper').slick({
-		...sliderDefault,
+		slidesToScroll: 1,
+		infinite: true,
+		speed: 650,
+		loop: true, 
+		dots: false,
+		mobileFirst: true, 
 		dots: true,
 		arrows: true, 
 		prevArrow: arrr2,
@@ -117,7 +132,12 @@ jQuery(document).ready(function ($) {
 	
 	
 	$('.s-swiper__slider--js').slick({
-		...sliderDefault,
+		slidesToScroll: 1,
+		infinite: true,
+		speed: 650,
+		loop: true, 
+		dots: false,
+		mobileFirst: true, 
 		dots: true,
 		arrows: true, 
 		prevArrow: arrr2,

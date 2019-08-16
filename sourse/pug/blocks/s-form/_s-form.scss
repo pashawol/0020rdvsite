@@ -57,3 +57,30 @@
 		}
 	}
 }
+
+.form-market{
+	.h5{
+		font-weight: 300;
+		line-height: rem(34);
+		text-align: center;
+		max-width: rem(1180);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.form-market-bottom{
+	padding: 0 0 rem(120);
+	.form-wrap__input{
+		background-color: #fff;
+	}
+	.container{
+		max-width: rem(1144);
+		padding: rem(38) rem(10) rem(42);
+	}
+	.row{
+		max-width: rem(830);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

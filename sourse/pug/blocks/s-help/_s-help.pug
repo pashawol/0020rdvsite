@@ -10,3 +10,18 @@ mixin s-help()
 					+icon("chevron-right2") 
 		+pic("help-bg","jpg","bg")(class="picture-bg")
 	// end s-help
+
+
+mixin s-try-rdv()
+	// start s-try-rdv
+	+b.SECTION.s-help.section.bg-primary.try-rdv.text-white.bg-wrap#s-help&attributes(attributes)
+		.container
+			+b.section-title
+				h2 ПопробУЙТЕ RDV Маркет в деле
+				.h5.fw-300 Оставьте заявку, и мы покажем, как организовывать эффективное взаимодействие интернет-магазина с&nbsp;маркетплейсом.
+				.h5.fw-300 Проведем детальную демонстрацию продукта специально для вас. Пошагово познакомим со всеми процессами системы: от выгрузки товара товара на площадку, до завершения обработки заказа.
+			+e.btn.btn-warning(href="#") БЕСПЛАТНЫЙ ТЕСТ-ДРАЙВ
+				.btn-icon-wrap
+					+icon("chevron-right2") 
+		+pic("try-rdv-bg","jpg","bg")(class="picture-bg")
+	// end s-try-rdv

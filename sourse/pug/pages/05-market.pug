@@ -28,6 +28,11 @@ include ../blocks/s-market-video/_s-market-video.pug
 include ../blocks/s-for-whom/_s-for-whom.pug
 include ../blocks/s-effective/_s-effective.pug
 include ../blocks/s-swiper/_s-swiper.pug
+include ../blocks/s-tariffs/_s-tariffs.pug
+include ../blocks/s-market-grid/_s-market-grid.pug
+include ../blocks/s-help/_s-help.pug
+include ../blocks/s-form/_s-form.pug
+include ../blocks/s-marketplace/_s-marketplace.pug
 block variables
 	- let  mainPage= null
 block title
@@ -54,9 +59,14 @@ block pagecontent
 	+s-for-whom()
 	+s-effective()
 	+s-swiper()(class="market-swiper")
-	//- +s-advantages()
+	+s-market-tariffs()(class="market-tariffs")
+	+s-market-grid()
+	+s-try-rdv()
 	//- +s-steps
-	//- +s-form-03()
+	+s-form-market-1()
+	+s-marketplace()
+	+s-market-bottom-advantages()
+	+s-form-market-2()
 	//- +s-help()
 	+footer()
 	//- +s-form()

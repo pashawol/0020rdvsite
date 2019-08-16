@@ -1,0 +1,79 @@
+.s-marketplace {
+	background-image: url(../img/s-effective-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	padding: rem(60) 0 rem(70);
+	h2{
+		color: #fff;
+		text-transform: uppercase;
+		&::after{
+			background-color: #fff;
+			background-color: $warning;
+		}
+	}
+	&__item{
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		margin-bottom: rem(20);
+	}
+	&__item-title{
+		font-weight: 500;
+		line-height: rem(34);
+	}
+	&__item-wrapper{
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+	}
+	.marketplace-logo{
+		margin-top: auto;
+		margin-bottom: auto;
+		padding: rem(55) rem(10) rem(36);
+	}
+	&__marketplace-name-wrapper{
+		width: 100%;
+		min-height: rem(55);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 rem(10);
+		font-size: rem(15);
+	}
+	&__name{
+		display: inline-block;
+	}
+	.marketplace-logo-mini{
+		width: auto;
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}
