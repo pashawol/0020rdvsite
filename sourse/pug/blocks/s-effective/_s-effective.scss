@@ -58,13 +58,19 @@
 		&::after{
 			content: "";
 			position: absolute;
-			top: 0;
-			right: rem(-55);
+			top: rem(-60);
+			left: 0;
 			width: rem(38);
 			height: rem(38);
 			background-image: url(../img/svg/effective-link.svg);
 			background-repeat: no-repeat;
 			background-size: cover;
+			@include media-breakpoint-up(md) {
+				right: rem(-55);
+				top: unset;
+				left: unset;
+				@include a-cent(y);
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

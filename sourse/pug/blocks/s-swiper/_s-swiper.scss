@@ -1,4 +1,10 @@
 .s-swiper {
+	.slick-dots li{
+		border-color: #2080a9 ;
+		&::before{
+			background-color: $primary;
+		}
+	}
 	@include media-breakpoint-up(md) {
 		padding: 0;
 	}

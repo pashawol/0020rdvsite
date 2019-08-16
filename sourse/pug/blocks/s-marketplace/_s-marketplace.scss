@@ -7,6 +7,7 @@
 	h2{
 		color: #fff;
 		text-transform: uppercase;
+		margin-bottom: rem(25);
 		&::after{
 			background-color: #fff;
 			background-color: $warning;
@@ -17,11 +18,11 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		margin-bottom: rem(20);
 	}
 	&__item-title{
 		font-weight: 500;
 		line-height: rem(34);
+		flex-grow: 1;
 	}
 	&__item-wrapper{
 		background-color: #fff;
@@ -29,12 +30,19 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex-grow: 1;
+		margin-bottom: rem(30);
 	}
 	.marketplace-logo{
 		margin-top: auto;
 		margin-bottom: auto;
 		padding: rem(55) rem(10) rem(36);
+		height: rem(240);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			flex-shrink: 0;
+		}
 	}
 	&__marketplace-name-wrapper{
 		width: 100%;
@@ -50,6 +58,7 @@
 	}
 	.marketplace-logo-mini{
 		width: auto;
+		margin-right: rem(15);
 	}
 		 
 	@include media-breakpoint-up(xl) {}
