@@ -132,7 +132,7 @@
 		margin-top: rem(-20);
 		opacity: .7;
 		@include media-breakpoint-down(md) {
-				top: 99.2%;
+				top: 101%;
 		}
 		@include mt;
 		svg{
@@ -231,6 +231,10 @@
 	margin-bottom: 0 !important;
 	.slick-list{
 		padding-bottom: 0;
+	}
+	.slick-dots{
+		margin-top: rem(-10);
+		margin-bottom: rem(45);
 	}
 	h2{
 		margin-bottom: rem(37);
