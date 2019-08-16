@@ -88,8 +88,8 @@
     &.container--market{
       &::before{
         @include media-breakpoint-up(sm) {
-  
-          @include bg("head-texture-2.jpg"); 
+          
+          @include bg("head-texture-3.jpg"); 
         }
       }
     }

@@ -1,16 +1,22 @@
 .s-tariffs {
-	@include media-breakpoint-up(xl) {
-		margin-bottom: rem(72);
+	.slick-dots li{
+		border-color: #2080a9 ;
+		&::before{
+			background-color: $primary;
+		}
 	}
+	padding-bottom: rem(70);
 	&__wrapper{
 		margin-left: rem(-30);
 		margin-right: rem(-30);
-		padding-left: rem(20);
-		padding-right: rem(20);
-		margin-bottom: rem(40);
 		@include media-breakpoint-up(xl) {
 			margin-bottom: rem(60);
 		}
+	}
+	.slick-list{
+		padding-left: rem(20);
+		padding-right: rem(20);
+		padding-bottom: rem(40);
 	}
 	.slick-track{
 		display: flex;
@@ -28,10 +34,7 @@
 		box-shadow: -1px 10px $em-base rgba(23, 79, 119, 0.2);
 		display: flex;
 		flex-direction: column;
-		@include media-breakpoint-up(xl) {
-			padding-bottom: rem(40);
-			
-		}
+		
 	}
 	&__item-title{
 		color: #fff;
@@ -48,7 +51,8 @@
 		}
 	}
 	&__list{
-		list-style: none
+		list-style: none;
+		margin-bottom: 0;
 	}
 	&__list-item{
 		display: flex;
@@ -84,6 +88,7 @@
 		span{
 			color: $primary;
 			display: block;
+			font-weight: 700;
 		}
 		@include media-breakpoint-down(xs) {
 			font-size: rem(16)
@@ -127,7 +132,7 @@
 		margin-top: rem(-20);
 		opacity: .7;
 		@include media-breakpoint-down(md) {
-				top: 101%;
+				top: 99.2%;
 		}
 		@include mt;
 		svg{
@@ -142,7 +147,7 @@
 		}
 	}
 	.r{
-		right: rem(-20);
+		right: rem(-10);
 		@include media-breakpoint-down(md) {
 				right: 35%;
 		}
@@ -154,7 +159,7 @@
 		}
 	}
 	.l{
-		left: rem(-20);
+		left: rem(-10);
 		@include media-breakpoint-down(md) {
 				left: 35%;
 		}
@@ -188,6 +193,7 @@
 		}
 		.custom-input__input[type=radio]+.custom-input__lab{
 			@include a-cent(y);
+			border: 2px solid $primary;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
@@ -237,14 +243,8 @@
 		padding-bottom: 0;
 	}
 	.s-tariffs__item .s-tariffs__btn{
-		background: #fff;
-		color: #000;
 		max-width: rem(267);
 		margin: 0 auto;
-		&:hover{
-			background-color: $primary;
-			border-color: $primary;
-			color: #ffffff;
-		}
+		@extend .btn-outline-primary;
 	}
 }
