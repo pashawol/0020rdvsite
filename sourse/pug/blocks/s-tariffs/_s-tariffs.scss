@@ -177,6 +177,12 @@
 	}
 
 	&__radio-box{
+		> .h5{
+			@include media-breakpoint-down(md) {
+				display: block;
+				width: 100%;
+			}
+		}
 		span{
 			font-weight: 300;
 			line-height: 34px;

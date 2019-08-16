@@ -67,13 +67,12 @@ mixin s-market-tariffs()
 		.container
 			+b.section-title
 				h2 Работу с маркетплейсами эффективной
-			.row
-				+e.radio-box.col-auto
-					span.h5 При оплате за:
-						+in-c("radio","1 мес.","tarrifs")
-						+in-c("radio","3 мес.","tarrifs")
-						+in-c("radio","6 мес.","tarrifs")
-						+in-c("radio","1 год","tarrifs")
+			+e.radio-box
+				span.h5 При оплате за:
+				+in-c("radio","1 мес.","tarrifs")
+				+in-c("radio","3 мес.","tarrifs")
+				+in-c("radio","6 мес.","tarrifs")
+				+in-c("radio","1 год","tarrifs")
 			+e.wrapper
 				+e.item-wrapper
 					+e.item
