@@ -1,0 +1,30 @@
+mixin s-marketplace()
+	// start s-marketplace
+	+b.SECTION.s-marketplace.section#s-marketplace&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Маркетплейсы
+			.row
+				.col-12.col-md-4
+					+e.item
+						+e.item-title.h6 Подключайтесь и зарабатывайте с goods
+						+e.item-wrapper
+							+pic("marketplace-logo1","png")(class="marketplace-logo")
+							+e.marketplace-name-wrapper.bg-red-dark.text-left
+								+pic("m-video-logo","png")(class="marketplace-logo-mini")
+								+e.name goods.ru основан и поддерживается компанией «М.Видео»
+				.col-12.col-md-4
+					+e.item
+						+e.item-title.h6 Канал онлайн продаж для продавцов Беру!
+						+e.item-wrapper
+							+pic("marketplace-logo2","png")(class="marketplace-logo")
+							+e.marketplace-name-wrapper.bg-violet-dark.text-center
+								+e.name Беру-новый маркетплейс от Сбербанка и Яндекса
+				.col-12.col-md-4
+					+e.item
+						+e.item-title.h6 Зарабатывайте с Ozon.ru
+						+e.item-wrapper
+							+pic("marketplace-logo3","png")(class="marketplace-logo")
+							+e.marketplace-name-wrapper.bg-azure-dark.text-center 
+								+e.name Ваши товары на OZON.ru
+	// end s-marketplace

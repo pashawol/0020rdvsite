@@ -64,3 +64,16 @@
 	@include media-breakpoint-down(xs) {} 
 
 }
+.try-rdv{
+	background-image: url(../img/s-effective-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	.s-help__btn{
+		width: 100%;
+		max-width: rem(400);
+	}
+	.h5{
+		line-height: rem(34);
+		margin-bottom: rem(35);
+	}
+}

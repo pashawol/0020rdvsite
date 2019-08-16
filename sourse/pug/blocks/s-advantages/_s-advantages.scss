@@ -2,7 +2,8 @@
 	padding-top: rem(70);
 	padding-bottom: rem(8);
 	.row{
-		@include roww(5)
+		@include roww(5);
+		counter-reset: section;
 	}
 	&__col{
 		position: relative;
@@ -41,6 +42,32 @@
 		font-size: 1rem;
 		margin-bottom: rem(10);
 	}
+	&__arrow-svg{
+		position: absolute;
+		top: 0;
+		left: rem(-45);
+		z-index: 3;
+	}
+	&__box{
+		@include a-cent(x);
+		z-index: -1;
+		width: rem(199px);
+		height: rem(199px);
+		background-color: $light;
+		top: 0;
+		&::after{
+			@extend .mono;
+			font-weight: 900;
+			color: $blue-dark;
+			font-style: italic;
+			font-size: rem(36);
+			content:  counter(section) ".";
+			counter-increment: section;
+			position: absolute;
+			top: rem(-18);
+			right: 0;
+		}
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -66,4 +93,13 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+}
+
+.market-bottom{
+	h2{
+		margin-bottom: rem(30);
+	}
+	.s-advantages__col::before{
+		content:  none;
+	}
 }

@@ -78,9 +78,12 @@
 		@extend .h5;
 		@extend .mono;
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
 		span{
 			color: $primary;
+			display: block;
 		}
 		@include media-breakpoint-down(xs) {
 			font-size: rem(16)
@@ -162,6 +165,31 @@
 				left: 25%;
 		}
 	}
+	&__pre-price{
+		text-decoration: line-through;
+		margin-bottom: 0;
+		font-weight: 500;
+	}
+
+	&__radio-box{
+		span{
+			font-weight: 300;
+			line-height: 34px;
+			color: #010101;
+		}
+		.custom-input__text{
+			font-size: $h6-font-size;
+			font-weight: 500;
+			color: #010101;
+		}
+		.custom-input{
+			margin-left: rem(10);
+			margin-bottom: 0;
+		}
+		.custom-input__input[type=radio]+.custom-input__lab{
+			@include a-cent(y);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -186,4 +214,37 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+}
+.market-tariffs{
+	margin-bottom: 0 !important;
+	h2{
+		margin-bottom: rem(37);
+	}
+	.s-tariffs__radio-box{
+		margin-bottom: rem(25);
+	}
+	.s-tariffs__item-text{
+		max-width: rem(210);
+	}
+	.s-tariffs__list-item{
+		min-height: rem(57);
+		align-items: center;
+	}
+	.s-tariffs__list{
+		margin-bottom: 0;
+	}
+	.s-tariffs__item{
+		padding-bottom: 0;
+	}
+	.s-tariffs__item .s-tariffs__btn{
+		background: #fff;
+		color: #000;
+		max-width: rem(267);
+		margin: 0 auto;
+		&:hover{
+			background-color: $primary;
+			border-color: $primary;
+			color: #ffffff;
+		}
+	}
 }

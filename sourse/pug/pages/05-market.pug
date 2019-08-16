@@ -1,0 +1,74 @@
+extends layout/main.pug
+//- include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+//- include ../blocks/s-opportunities/_s-opportunities.pug
+//- include ../blocks/s-schema/_s-schema.pug
+//- include ../blocks/s-give/_s-give.pug
+//- include ../blocks/s-programm/_s-programm.pug
+//- include ../blocks/s-work/_s-work.pug
+//- include ../blocks/s-price/_s-price.pug
+//- include ../blocks/s-why/_s-why.pug
+//- include ../blocks/s-project/_s-project.pug
+//- include ../blocks/s-tasks/_s-tasks.pug
+//- include ../blocks/s-logo/_s-logo.pug
+//- include ../blocks/s-rew/_s-rew.pug
+//- include ../blocks/s-q/_s-q.pug
+include ../blocks/s-advantages/_s-advantages.pug
+include ../blocks/s-market-advantages/_s-market-advantages.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-servises/_s-servises.pug
+include ../blocks/s-start/_s-start.pug
+include ../blocks/s-success/_s-success.pug
+include ../blocks/s-logo/_s-logo.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-steps/_s-steps.pug
+include ../blocks/s-help/_s-help.pug
+include ../blocks/s-market-video/_s-market-video.pug
+include ../blocks/s-for-whom/_s-for-whom.pug
+include ../blocks/s-effective/_s-effective.pug
+include ../blocks/s-swiper/_s-swiper.pug
+include ../blocks/s-tariffs/_s-tariffs.pug
+include ../blocks/s-market-grid/_s-market-grid.pug
+include ../blocks/s-help/_s-help.pug
+include ../blocks/s-form/_s-form.pug
+include ../blocks/s-marketplace/_s-marketplace.pug
+block variables
+	- let  mainPage= null
+block title
+	title Маркет
+block pagecontent
+	+mob-mnu()
+	+header()(class="bg-wrap")
+		//- (data-bg="img/@2x/head-bg--main.jpg")
+		+pic("head-bg--market","jpg","bg")(class="picture-bg")
+		.container.container--market.lazy-background.d-none.d-xl-block
+			+e.img-wrap
+				+pic("market-header-img","png")
+		+top-line()
+		+top-nav() 
+		- let probel  = `&nbsp;`
+		+header-block()
+			+breadcrumb("Главная "," Услуги "," Автоматизация операционных процессов на 1С "," Управление ресурсами предприятия (ERP)  ")
+			+e.label начните продавать
+			h1 на&nbsp;маркетплейсе прямо&nbsp;сейчас!
+			+e.text Комплексное решение для интеграции бизнес-процессов и&nbsp;систем интернет-продавца с&nbsp;маркетплейсом
+		 
+	+s-market-advantages()
+	+s-market-video()
+	+s-for-whom()
+	+s-effective()
+	+s-swiper()(class="market-swiper")
+	+s-market-tariffs()(class="market-tariffs")
+	+s-market-grid()
+	+s-try-rdv()
+	//- +s-steps
+	+s-form-market-1()
+	+s-marketplace()
+	+s-market-bottom-advantages()
+	+s-form-market-2()
+	//- +s-help()
+	+footer()
+	//- +s-form()
+	//- +s-contact()
+

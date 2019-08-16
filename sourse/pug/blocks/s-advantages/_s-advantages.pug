@@ -18,3 +18,31 @@ mixin s-advantages()
 				+item("4","Постпроектная поддержка")
 					+e.text SLA по&nbsp;завершению проекта гарантирует профессиональную поддержку Ваших сотрудников на&nbsp;высоком уровне
 	// end s-advantages
+
+
+mixin s-market-bottom-advantages()
+	// start s-advantages
+	+b.s-advantages.market-bottom.section#s-advantages&attributes(attributes)
+		.container
+			+b.section-title
+					h2 Начать работу просто
+			mixin item(i,t)
+				+e.col.col-lg-3.col-sm-6
+					+e.img-wrap: img.res-i.lazy(src="#" data-src=`img/svg/s-bottom-advantages${i}.svg`, alt="")
+					+e.box
+					+e.title= t
+					block
+				// /+e.col.col-lg-3.col-sm-6
+			.row
+				+item("1","Подайте заявку")
+					+e.text Наши менеджеры ответят на все&nbsp;вопросы и&nbsp;проведут демонстрацию сервиса
+				+item("2","Протестируйте сервис")
+					+e.IMG.arrow-svg(class="d-none d-xl-block" src="img/svg/advantages-arrow.svg" alt="")
+					+e.text Узнайте на&nbsp;практике, как можно&nbsp;оптимизировать работу интернет-магазина
+				+item("3","Станьте партнёром маркетплейса")
+					+e.IMG.arrow-svg(class="d-none d-xl-block" src="img/svg/advantages-arrow.svg" alt="")
+					+e.text Начните получать больше заказов&nbsp;с&nbsp;помощью популярных онлайн-витрин
+				+item("4","Повышайте прибыль")
+					+e.IMG.arrow-svg(class="d-none d-xl-block" src="img/svg/advantages-arrow.svg" alt="")
+					+e.text Используйте уникальное решение для повышения финансовых результатов компании
+	// end s-advantages

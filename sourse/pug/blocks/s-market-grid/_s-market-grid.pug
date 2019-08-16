@@ -1,0 +1,32 @@
+mixin s-market-grid()
+	// start s-market-grid
+	+b.SECTION.s-market-grid.bg-light.section#s-market-grid&attributes(attributes)
+		.container
+			+e.padding-wrapper
+				+pic("grid-side-back","png")(class="back-pic d-none d-xl-block")
+				+pic("grid-side-normal","png")(class="normal-pic d-none d-xl-block")
+				+pic("grid-side-top","png")(class="top-pic d-none d-xl-block")
+				.row
+					.col-4.d-none.d-xl-block
+					.col-auto.col-xl-8
+						+e.grid-wrapper
+							mixin grid-item(i, w)
+								+e.item
+									+pic(`grid-bg-i${i}`,"png")(class="grid__bg-image")
+									+e.content-wrapper
+										+e.IMG.icon(src=`img/svg/grid-icon${i}.svg` alt="" style=`max-width: ${w}px;`)
+										block
+							
+							+grid-item("1", "80")
+								+e.item-title.mono Платите только за&nbsp;то, что вам действительно необходимо
+								+e.item-text Выбирайте подходящий вашей компании тариф&nbspбез переплат
+							+grid-item("2", "50")
+								+e.item-title.mono Меняйте тариф в удобный момент
+								+e.item-text Изменилось количество сотрудников в&nbsp;штате?&nbsp;Вырос объем заказов? Просто измените тариф на соответствующий
+							+grid-item("3", "74")
+								+e.item-title.mono Оставьте заявку сейчас и работайте с&nbsp;RDV Маркетом уже завтра
+								+e.item-text Наш сервис не требует сложных настроек и&nbsp;дополнительных серверов, подключение займёт один день, после чего сразу можно начинать работу из офиса или удаленно.
+							+grid-item("4", "82")
+								+e.item-title.mono Работайте с последней версией
+								+e.item-text Наш сервис постоянно обновляется, соответствуя всем трендам e-commerce рынка,&nbsp;а все наши клиенты мгновенно получают доступ к свежим версиям
+	// end s-market-grid

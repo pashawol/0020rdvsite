@@ -131,8 +131,6 @@ textarea{
 	color: $dark; 
 font-size: $em-base;
 font-weight: 300;
-	&__text{
-	}
 	&__input{
 		position: absolute;
 		// opacity: 0;
@@ -164,7 +162,7 @@ font-weight: 300;
 
 	}
  
-	&__input[type="checkbox"] + &__lab{
+	&__input + &__lab{
 		&::after{ 
 			content:   "";
 			position: absolute;
@@ -176,19 +174,20 @@ font-weight: 300;
 			background-color: $primary;
 		}
 	}
-
+	
 	&__input[type="radio"] + &__lab{ 
-		border-radius: 50%;
 		&::after{ 
+			width: rem(10px);
+			height: rem(10px);
 			border-radius: 50%;
 		}
+		border-radius: 50%;
 	}
 
 	&__input:checked + &__lab{
-		// background-color: $success;
-		 
+		border-color: $primary;
+		
 		&::after{
-	
 			opacity: 1;
 		}
 	}
