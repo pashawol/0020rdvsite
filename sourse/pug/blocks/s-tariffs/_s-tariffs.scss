@@ -229,6 +229,9 @@
 }
 .market-tariffs{
 	margin-bottom: 0 !important;
+	.slick-list{
+		padding-bottom: 0;
+	}
 	h2{
 		margin-bottom: rem(37);
 	}
