@@ -2,46 +2,45 @@ mixin s-swiper()
 	// start s-swiper
 	+b.SECTION.s-swiper.section#s-swiper&attributes(attributes)
 		.container
-			+e.slider--js
-				+e.slide
-					+b.banner.bg-wrap
-						+pic("banner-bg-1","jpg","bg","","")(class="picture-bg")
-						.h6 Оформите подписку на любой тариф
-						+e.title и получайте <span>+1 месяц в подарок!</span> *
-						+e.text Только по 31.08.2019
-						+e.A.btn(href="#") оформить подписку
-							span.btn-icon-wrap
-								+icon("chevron-right2") 
-						+e.subtext * Акция действует на срок подписки от 3-х месяцев
-						+pic("banner-img-1","png","","",0)(class="banner__ablosute banner__corner-pic")
-				+e.slide
-					+b.banner.bg-wrap
-						+pic("banner-bg-2","jpg","bg","")(class="picture-bg")
-						.h6 Открывайте новые каналы продаж
-						+e.title подключаясь к маркетплейсам
-						.h5 Поможем повысить конкурентоспособность интернет-магазина. RDV Маркет - эффективное решение для этого
-						+e.A.btn(href="#") узнать подробнее
-							span.btn-icon-wrap
-								+icon("chevron-right2") 
-						+pic("banner-img-2","png","","",0)(class="banner__ablosute banner__left-ceter-pic")
-				+e.slide
-					+b.banner.bg-wrap
-						+pic("banner-bg-3","jpg","bg","")(class="picture-bg")
-						.h6 Оптимизируйте затраты, выбирая срок подписки:
-						+e.title на месяц, квартал, полгода или год
-						+e.text Больше срок подписки – меньше цена.
-						+e.A.btn(href="#") оптимизировать затраты
-							span.btn-icon-wrap
-								+icon("chevron-right2") 
-						+pic("banner-img-3","png","","",0)(class="banner__ablosute banner__corner-pic")
-				+e.slide
-					+b.banner.bg-wrap.last-banner
-						+pic("banner-bg-4","jpg","bg","")(class="picture-bg")
-						.h6 Протестируйте RDV Маркет
-						+e.title <span>бесплатно</span> в течение 14 дней
-						.h5 Мы создали продукт, который сделать работу с маркетплейсами проще и эффективнее
-						+e.A.btn(href="#") попробовать бесплатно
-							span.btn-icon-wrap
-								+icon("chevron-right2") 
-						+pic("banner-img-4","png","","",0)(class="banner__ablosute banner__middle-pic")
+			+e.slider--js(data-slick='{"autoplay": true, "autoplaySpeed": 6000}')
+				mixin slide(i, t)
+					+e.slide
+						+b.banner.bg-wrap
+							+pic("banner-bg-"+ i,"jpg","bg","","")(class="picture-bg")
+							.h6= t
+							block
+					// /+e.slide
+
+				+slide(1,'Оформите подписку на любой тариф')
+					+e.title и получайте <span>+1 месяц в подарок!</span> *
+					+e.text Только по 31.08.2019
+					+e.A.btn(href="#") оформить подписку
+						span.btn-icon-wrap
+							+icon("chevron-right2") 
+					+e.subtext * Акция действует на срок подписки от 3-х месяцев
+					+pic("banner-img-1","png","","",0)(class="banner__ablosute banner__corner-pic")
+
+				+slide(2,'Открывайте новые каналы продаж') 
+					+e.title подключаясь к маркетплейсам
+					.h5 Поможем повысить конкурентоспособность интернет-магазина. RDV Маркет - эффективное решение для этого
+					+e.A.btn(href="#") узнать подробнее
+						span.btn-icon-wrap
+							+icon("chevron-right2") 
+					+pic("banner-img-2","png","","",0)(class="banner__ablosute banner__left-ceter-pic")
+
+				+slide(3,'Оптимизируйте затраты, выбирая срок подписки:') 
+					+e.title на месяц, квартал, полгода или год
+					+e.text Больше срок подписки – меньше цена.
+					+e.A.btn(href="#") оптимизировать затраты
+						span.btn-icon-wrap
+							+icon("chevron-right2") 
+					+pic("banner-img-3","png","","",0)(class="banner__ablosute banner__corner-pic")
+
+				//- +slide(4,'Протестируйте RDV Маркет')
+				//- 	+e.title <span>бесплатно</span> в течение 14 дней
+				//- 	.h5 Мы создали продукт, который сделать работу с маркетплейсами проще и эффективнее
+				//- 	+e.A.btn(href="#") попробовать бесплатно
+				//- 		span.btn-icon-wrap
+				//- 			+icon("chevron-right2") 
+				//- 	+pic("banner-img-4","png","","",0)(class="banner__ablosute banner__middle-pic")
 	// end s-swiper

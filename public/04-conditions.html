@@ -123,7 +123,7 @@
       <!-- start s-swiper-->
       <section class="s-swiper section" id="s-swiper">
         <div class="container">
-          <div class="s-swiper__slider s-swiper__slider--js">
+          <div class="s-swiper__slider s-swiper__slider--js" data-slick="{&quot;autoplay&quot;: true, &quot;autoplaySpeed&quot;: 6000}">
             <div class="s-swiper__slide">
               <div class="banner bg-wrap">
                 <!-- picture-->
@@ -152,17 +152,18 @@
                 <!-- /picture -->
               </div>
             </div>
+            <!-- /+e.slide-->
             <div class="s-swiper__slide">
               <div class="banner bg-wrap">
                 <!-- picture-->
                 <picture class="picture-bg"> 
-                  <source srcset="img/@2x/webp/banner-bg-2.webp" type="image/webp" media="(min-width:576px)"/>
+                  <source srcset="img/@2x/webp/banner-bg-2.webp" type="image/webp" media="(min-width:)"/>
                   <source srcset="img/@1x/webp/banner-bg-2.webp" type="image/webp"/>
-                  <source srcset="img/@2x/banner-bg-2.jpg" type="image/jpg" media="(min-width:576px)"/>
+                  <source srcset="img/@2x/banner-bg-2.jpg" type="image/jpg" media="(min-width:)"/>
                   <source srcset="img/@1x/banner-bg-2.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/banner-bg-2.jpg" alt=""/>
                 </picture>
                 <!-- /picture -->
-                <div class="h6">Открывайте новые каналы продаж</div>
+                <div class="h6">Открывайте новые каналы продаж</div> 
                 <div class="banner__title">подключаясь к маркетплейсам
                 </div>
                 <div class="h5">Поможем повысить конкурентоспособность интернет-магазина. RDV Маркет - эффективное решение для этого</div><a class="banner__btn" href="#">узнать подробнее<span class="btn-icon-wrap">
@@ -177,17 +178,18 @@
                 <!-- /picture -->
               </div>
             </div>
+            <!-- /+e.slide-->
             <div class="s-swiper__slide">
               <div class="banner bg-wrap">
                 <!-- picture-->
                 <picture class="picture-bg"> 
-                  <source srcset="img/@2x/webp/banner-bg-3.webp" type="image/webp" media="(min-width:576px)"/>
+                  <source srcset="img/@2x/webp/banner-bg-3.webp" type="image/webp" media="(min-width:)"/>
                   <source srcset="img/@1x/webp/banner-bg-3.webp" type="image/webp"/>
-                  <source srcset="img/@2x/banner-bg-3.jpg" type="image/jpg" media="(min-width:576px)"/>
+                  <source srcset="img/@2x/banner-bg-3.jpg" type="image/jpg" media="(min-width:)"/>
                   <source srcset="img/@1x/banner-bg-3.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/banner-bg-3.jpg" alt=""/>
                 </picture>
                 <!-- /picture -->
-                <div class="h6">Оптимизируйте затраты, выбирая срок подписки:</div>
+                <div class="h6">Оптимизируйте затраты, выбирая срок подписки:</div> 
                 <div class="banner__title">на месяц, квартал, полгода или год
                 </div>
                 <div class="banner__text">Больше срок подписки – меньше цена.
@@ -203,31 +205,7 @@
                 <!-- /picture -->
               </div>
             </div>
-            <div class="s-swiper__slide">
-              <div class="banner bg-wrap last-banner">
-                <!-- picture-->
-                <picture class="picture-bg"> 
-                  <source srcset="img/@2x/webp/banner-bg-4.webp" type="image/webp" media="(min-width:576px)"/>
-                  <source srcset="img/@1x/webp/banner-bg-4.webp" type="image/webp"/>
-                  <source srcset="img/@2x/banner-bg-4.jpg" type="image/jpg" media="(min-width:576px)"/>
-                  <source srcset="img/@1x/banner-bg-4.jpg" type="image/jpg"/><img class="object-fit-js" src="img/@2x/banner-bg-4.jpg" alt=""/>
-                </picture>
-                <!-- /picture -->
-                <div class="h6">Протестируйте RDV Маркет</div>
-                <div class="banner__title"><span>бесплатно</span> в течение 14 дней
-                </div>
-                <div class="h5">Мы создали продукт, который сделать работу с маркетплейсами проще и эффективнее</div><a class="banner__btn" href="#">попробовать бесплатно<span class="btn-icon-wrap">
-                  <svg class="icon icon-chevron-right2 ">
-                    <use xlink:href="img/svg/sprite.svg#chevron-right2"></use>
-                  </svg></span></a>
-                <!-- picture-->
-                <picture class="banner__ablosute banner__middle-pic"> 
-                  <source srcset="img/@2x/webp/banner-img-4.webp" type="image/webp"/>
-                  <!-- /webp images  --><img src="img/@2x/banner-img-4.png" alt=""/>
-                </picture>
-                <!-- /picture -->
-              </div>
-            </div>
+            <!-- /+e.slide-->
           </div>
         </div>
       </section>
@@ -430,7 +408,7 @@
                       </svg></span>
                   </button>
                   <div class="form-wrap__polite">
-                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Отправляя заявку вы&nbsp;даете свое согласие на обработку персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-body" href="#">условиями оферты</a></span>
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-body" href="#">условиями оферты</a>.</span>
                     </label>
                   </div>
                 </div>
@@ -514,7 +492,7 @@
         </div>
         <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
         <div class="form-wrap__polite">
-          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Отправляя заявку вы&nbsp;даете свое согласие на обработку персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-body" href="#">условиями оферты</a></span>
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-body" href="#">условиями оферты</a>.</span>
           </label>
         </div>
       </form>
