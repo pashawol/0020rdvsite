@@ -67,13 +67,12 @@ mixin s-market-tariffs()
 		.container
 			+b.section-title
 				h2 Работу с маркетплейсами эффективной
-			.row
-				+e.radio-box.col-auto
-					span.h5 При оплате за:
-						+in-c("radio","1 мес.","tarrifs")
-						+in-c("radio","3 мес.","tarrifs")
-						+in-c("radio","6 мес.","tarrifs")
-						+in-c("radio","1 год","tarrifs")
+			+e.radio-box
+				span.h5 При оплате за:
+				+in-c("radio","1 мес.","tarrifs")
+				+in-c("radio","3 мес.","tarrifs")
+				+in-c("radio","6 мес.","tarrifs")
+				+in-c("radio","1 год","tarrifs")
 			+e.wrapper
 				+e.item-wrapper
 					+e.item
@@ -91,7 +90,7 @@ mixin s-market-tariffs()
 								+e.item-text Количество пользователей:
 								+e.item-price до 5
 							+e.LI.list-item 
-								+e.A.btn.btn-primary(href="#") Выбрать
+								+e.A.btn(href="#") Выбрать
 									span.btn-icon-wrap
 										+icon("chevron-right2") 
 				+e.item-wrapper
@@ -110,7 +109,7 @@ mixin s-market-tariffs()
 								+e.item-text Количество пользователей:
 								+e.item-price до 10
 							+e.LI.list-item 
-								+e.A.btn.btn-primary(href="#") Выбрать
+								+e.A.btn(href="#") Выбрать
 									span.btn-icon-wrap
 										+icon("chevron-right2") 
 				+e.item-wrapper
@@ -127,7 +126,7 @@ mixin s-market-tariffs()
 								+e.item-text Количество пользователей:
 								+e.item-price до 5
 							+e.LI.list-item 
-								+e.A.btn.btn-primary(href="#") Выбрать
+								+e.A.btn(href="#") Выбрать
 									span.btn-icon-wrap
 										+icon("chevron-right2")
 			+e.btn-wrapper

@@ -1,9 +1,10 @@
 .s-market-video {
-	z-index: 2;
 	background: transparent;
 	position: relative;
 	padding: rem(14) 0;
+	z-index: 3;
 	&__video-wrapper{
+		box-shadow: 0 14px 30px rgba(23, 79, 119, 0.3);
 		@include block(1130,524);
 		max-width: rem(1130);
 		margin: 0 auto;
